@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Kalvir Sandhu</title>
+    <link href="http://kalv.co.uk/index.xml" rel="self"/>
+    <link href="http://kalv.co.uk/"/>
+    <updated>2014-07-23T08:18:11-07:00</updated>
+    <id>http://kalv.co.uk</id>
+    <author>
+        <name>Kalvir Sandhu</name>
+        <email>kalv@kalv.co.uk</email>
+    </author>
+    
+    
+      <entry>
+          <title>Ember.js learning resources and libraries</title>
+          <link href="http://kalv.co.uk/2013/10/25/ember-dot-js-learning-resources.html"/>
+          <updated>2013-10-25T09:01:00-07:00</updated>
+          <id>http://kalv.co.uk/2013/10/25/ember-dot-js-learning-resources</id>
+          <content type="html">&lt;p&gt;We ran the first &lt;a href=&quot;http://www.meetup.com/Vancouver-Ember-js&quot;&gt;Vancouver Ember.js meetup&lt;/a&gt; last night and it was fun to hear from other developers in town developing applications using the great framework. We very much treated the evening as a pre-first event to understand what we&#39;ll do in the future meetups. Thanks to &lt;a href=&quot;fullstack.ca/stackhaus/&quot;&gt;FullStack&lt;/a&gt; for letting us use their offices.&lt;/p&gt;
+
+&lt;p&gt;As we got talking we thought it best to share where and what we&#39;ve been using to build our applications. And also collect learning resources for the new developers in the room.&lt;/p&gt;
+
+&lt;p&gt;Here&#39;s a quick link dump of what we all found useful. Please add a comment if you are using something that we missed.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s worth mentioning that a couple of people mentioned to &lt;strong&gt;not&lt;/strong&gt; read or watch anything that was not written this year or even since 6 months ago as it being out of date will confuse you.&lt;/p&gt;
+
+&lt;h2&gt;Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://emberjs.com/guides/&quot;&gt;Official Ember guides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ember101.com/&quot;&gt;Ember 101&lt;/a&gt; - Ember screencasts from &lt;a href=&quot;http://ryanflorence.com/&quot;&gt;Ryan Florence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tutsplus.com/course/hands-on-emberjs/&quot;&gt;Tuts+ learning course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.embercasts.com/&quot;&gt;Embercasts&lt;/a&gt; - Screencasts including some neat ones on handling authentication&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/discourse/discourse&quot;&gt;Discourse&lt;/a&gt; - An open source platform for discussion built with Ember and Rails&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://peepcode.com/products/emberjs&quot;&gt;Peepcode Screencast&lt;/a&gt; - Some people had found this screencast a bit difficult to relate to a real web application that involved an API, I myself found it useful.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;News&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://emberweekly.com/&quot;&gt;Ember weekly&lt;/a&gt; - A weekly newsletter of ember news, tips &amp;amp; code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://twitter.com/emberwatch&quot;&gt;Ember watch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Tools / Libraries&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/heartsentwined/ember-auth&quot;&gt;ember-auth rails gem&lt;/a&gt; - Authentication framework for ember.js&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/emberjs/ember-rails&quot;&gt;ember-rails&lt;/a&gt; - A rails gem to help add Ember and manage templates for Rails. Will also add &lt;a href=&quot;https://github.com/rails-api/active_model_serializers&quot;&gt;ActiveModel::Serializer&lt;/a&gt; for integration with Ember Data&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stefanpenner/ember-app-kit&quot;&gt;ember-app-kit&lt;/a&gt; - A foundation library to help scaffold and manage the layout for ambitious applications&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rpflorence/ember-tools&quot;&gt;ember-tools&lt;/a&gt; - Another helper to manage project layout, scaffolding for learning, etc.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://fortunejs.com/&quot;&gt;Fortune.js&lt;/a&gt; - A node.js api prototyping library to help get up a backend api for development&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/daliwali/ember-json-api&quot;&gt;ember-json-api&lt;/a&gt; - A JSON API adapter for Ember Data&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi?hl=en&quot;&gt;Ember chrome
+inspector&lt;/a&gt; - A must have tool for development&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;If you&#39;re interested in Ember and in Vancouver, we are going to meet regularly to share and build on one another&#39;s experiences, so &lt;a href=&quot;http://www.meetup.com/Vancouver-Ember-js&quot;&gt;come along&lt;/a&gt;, even if you just want to start learn Ember.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+    
+    
+      <entry>
+          <title>Better task management and more cloud please</title>
+          <link href="http://kalv.co.uk/2013/02/08/better-task-management-and-more-cloud-please.html"/>
+          <updated>2013-02-08T09:07:00-08:00</updated>
+          <id>http://kalv.co.uk/2013/02/08/better-task-management-and-more-cloud-please</id>
+          <content type="html">&lt;p&gt;I wrote a post the other week about what tools I use today. It got me
+thinking on how I would want to improve that setup.&lt;/p&gt;
+
+&lt;h3&gt;Task management&lt;/h3&gt;
+
+&lt;p&gt;I still feel that I don&#39;t get the most out of task management software.
+I just recently switched to Android and I lost Reminders from iOS and
+it made my brain start to think how I would like to do tasks.&lt;/p&gt;
+
+&lt;p&gt;I want to use something that can better manage what I should do based on
+my mindset or context (Yes &lt;a href=&quot;https://plus.google.com/+Scobleizer/posts&quot;&gt;Robert
+Scoble&lt;/a&gt; too would probably
+want this). For example I want a notification to remind me what I should
+do when I&#39;m at work working on project x or client y.&lt;/p&gt;
+
+&lt;p&gt;Remind me what to mention or talk  when I&#39;m meeting with a specific contact for coffee.&lt;/p&gt;
+
+&lt;p&gt;Something to remind me when it&#39;s the weekend and I should do the things
+my family asked me to do, that passing task my Wife asked me to do
+during the week.&lt;/p&gt;
+
+&lt;p&gt;To take things further that system should be collaborative, allowing
+other members I give access to add things to that task list. I&#39;m always
+getting tasks via email from my family, community groups &amp;amp; teams.&lt;/p&gt;
+
+&lt;p&gt;I can&#39;t find anything at the moment so I&#39;m trying to use a bunch of
+tools to satisfy this.&lt;/p&gt;
+
+&lt;h3&gt;Mo&#39; Cloud services&lt;/h3&gt;
+
+&lt;p&gt;I want to embrace cloud services more.&lt;/p&gt;
+
+&lt;p&gt;I want to not rely on on my laptop as much. In case it dies or so that I can move to having separate machines
+again. One machine at work and another at home. I don&#39;t feel the need to
+carry around a laptop as much anymore.&lt;/p&gt;
+
+&lt;p&gt;With this in mind perhaps my development environments could all be
+virtual servers setup with the correct way, taking pages from the
+&lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; efforts.&lt;/p&gt;
+
+&lt;p&gt;Maybe my machine at the office is just a &lt;a href=&quot;http://www.raspberrypi.org/&quot;&gt;Raspberry
+PI&lt;/a&gt; that can bring up
+Chrome and shell to get vim open. Would that be enough? :wq&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Forget Tender, Get satisfaction, is an email address enough?</title>
+          <link href="http://kalv.co.uk/2013/02/01/forget-tender-get-satisfaction-is-an-email-address-enough.html"/>
+          <updated>2013-02-01T10:10:00-08:00</updated>
+          <id>http://kalv.co.uk/2013/02/01/forget-tender-get-satisfaction-is-an-email-address-enough</id>
+          <content type="html">&lt;p&gt;I have a working theory that perhaps providing a simple email address
+for customers in a web application is enough to get good quality feedback. Let me try to explain why.&lt;/p&gt;
+
+&lt;p&gt;These thoughts apply to a product still in it&#39;s early stages of product
+market fit and one that perhaps doesn&#39;t benefit from those ticket delegation management dashboard things that are out there.&lt;/p&gt;
+
+&lt;h2&gt;Reduction in noise&lt;/h2&gt;
+
+&lt;p&gt;Having a support tool that makes commenting and posting easy makes it
+too easy for people to complain. Meaning I&#39;ve ended up getting lots of
+people commenting on what they think is best to do.&lt;/p&gt;
+
+&lt;p&gt;Like a designer telling you what colours you should use, how the
+typeface is wrong. Somebody telling you how you should do things
+differently with an area of your application. They never know the
+thought or reasoning. So you spend time explaining it and perhaps
+getting into a debate.&lt;/p&gt;
+
+&lt;p&gt;Does this really help you get more paying customers? Not to me, I just
+find it adds more time having to explain ourselves to all users, whether
+they are paying or not.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m all ok explaining our thinking and decisions but not when our time
+is limited.&lt;/p&gt;
+
+&lt;h2&gt;Barrier adds to validation&lt;/h2&gt;
+
+&lt;p&gt;Making it harder to provide feedback is product validation
+itself. Allowing me to see who really cares enough to send information on bugs or feedback.&lt;/p&gt;
+
+&lt;p&gt;They will spend time opening up their email and sending one. This
+matters when our time is limited, I only end up talking to customers that matter.&lt;/p&gt;
+
+&lt;h2&gt;Public support threads, are um public&lt;/h2&gt;
+
+&lt;p&gt;On some support tools you can have public threads, so when users discuss a problem, it&#39;s public. My thinking previously on this was that it&#39;s fine, because you&#39;ll show how you&#39;re improving the situation and dealing with it.&lt;/p&gt;
+
+&lt;p&gt;But what about those cases where it&#39;s a matter of opinion and you choose
+something the customer disagrees with. Or feature creep starts to mean
+you&#39;re adding too many product directions making things confusing and
+hard to please your customer base, because it&#39;s getting too broad.&lt;/p&gt;
+
+&lt;p&gt;This just ends up being a negative post about your product and team.
+Something that perhaps would better dealt with privately and directly.&lt;/p&gt;
+
+&lt;h2&gt;Cheap&lt;/h2&gt;
+
+&lt;p&gt;There will be no need to pay for another service. We can use a shared email address and
+have the team reply to incoming emails as they come.&lt;/p&gt;
+
+&lt;h2&gt;Further learning&lt;/h2&gt;
+
+&lt;p&gt;An example of simple support I used the other day was
+&lt;a href=&quot;http://mixpanel.com&quot;&gt;Mixpanel&lt;/a&gt;. They simply have a &#39;support&#39; link that
+points to an email address. I cared about the feature I wanted improved so I spent the time doing the email dance.&lt;/p&gt;
+
+&lt;p&gt;Our most recent product &lt;a href=&quot;http://twitter.com/caliper&quot;&gt;Caliper&lt;/a&gt;, we&#39;re trying this method and we&#39;re finding the results less noisy and much higher in value, so I&#39;m going to continue.&lt;/p&gt;
+
+&lt;p&gt;Thoughts? :wq&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>My 2013 setup of hardware &amp; software</title>
+          <link href="http://kalv.co.uk/2013/01/28/my-2013-setup-of-hardware-and-software.html"/>
+          <updated>2013-01-28T12:04:00-08:00</updated>
+          <id>http://kalv.co.uk/2013/01/28/my-2013-setup-of-hardware-and-software</id>
+          <content type="html">&lt;p&gt;I started developing on a HP unix machine that had a green screen, I
+forget what processor it was, but all I had was a c-shell and I loved
+it. Things have moved on from then. I&#39;m dumping out what I use today so
+I can look back later in the years ahead.&lt;/p&gt;
+
+&lt;h3&gt;Hardware&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Macbook air 1.8ghz i7, 4gb RAM, 256GB SSD&lt;/li&gt;
+&lt;li&gt;iPhone 4 32gb, ARM Cortex A8 with PowerVR GPU (Apple A4)&lt;/li&gt;
+&lt;li&gt;iPad Mini WiFi 32gb, ARM Cortext A9 with Dual core PowerVR GPU (Apple
+A5)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Daily desktop software&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac OS X 10.8.2&lt;/li&gt;
+&lt;li&gt;Reminders&lt;/li&gt;
+&lt;li&gt;Calendar synced with Google&lt;/li&gt;
+&lt;li&gt;Google Chrome beta - sticky tab mail for personal and another for company, irccloud for IRC chat&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iterm2.com/#/section/home&quot;&gt;iTerm&lt;/a&gt;, so that I can use split panes and use the mac cmd keys (my brain is programmed that way currently)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; as a launcher and helper to quickly get to data (contacts, open recent files, clipboard history)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tweetdeck.com/&quot;&gt;Tweetdeck&lt;/a&gt; mac for tweet deck&lt;/li&gt;
+&lt;li&gt;iTunes for local music&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;For Development&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;zsh, with my &lt;a href=&quot;https://github.com/kalv/dotfiles&quot;&gt;dotfiles&lt;/a&gt; for custom
+prompt, aliases, history search etc.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.google.com/p/macvim/&quot;&gt;macvim&lt;/a&gt; for editing code, markdown and other text based files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mxcl/homebrew&quot;&gt;homebrew&lt;/a&gt; to manage my Mac
+libraries and services (Thank you &lt;a href=&quot;http://methylblue.com/&quot;&gt;Max&lt;/a&gt; for this!)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.postgresql.org/&quot;&gt;Postgres&lt;/a&gt; first choice of db on projects therefore always running, MySQL and mongoDB manually turn off and on when I need&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://redis.io&quot;&gt;Redis&lt;/a&gt; always running, used as cache and backed for queuing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sstephenson/rbenv/&quot;&gt;rbenv&lt;/a&gt; to manage my ruby versions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; for developing other stuff
+requiring lots of things I don&#39;t need every day (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS&quot;&gt;Firefox
+OS&lt;/a&gt; compiling for example)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Web services&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.dropbox.com/&quot;&gt;Dropbox&lt;/a&gt; for Documents&lt;/li&gt;
+&lt;li&gt;Google GMail, calendar, contacts, docs (or should I say drive)&lt;/li&gt;
+&lt;li&gt;Google Reader&lt;/li&gt;
+&lt;li&gt;iCloud for Reminders and find my phone &amp;amp; iPad&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://evernote.com/&quot;&gt;Evernote&lt;/a&gt; - for dumping my brain on ideas / potential emails / things i want to continue on the iPhone&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; &amp;amp; &lt;a href=&quot;http://codeplane.com/&quot;&gt;Codeplane&lt;/a&gt; for repo hosting&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilebits.com/onepassword&quot;&gt;1password&lt;/a&gt; for my password management&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.instapaper.com/&quot;&gt;Instapaper&lt;/a&gt; for reading&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pinboard.in&quot;&gt;Pinboard&lt;/a&gt; for saving bookmarks and sharing with team&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blogtrottr.com/&quot;&gt;Blogtrotter&lt;/a&gt; to send our team pinboard links
+we save under certrain tags&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;pivotaltracker.com&quot;&gt;Pivotal Tracker&lt;/a&gt; for managing iterations with clients and internal projects&lt;/li&gt;
+&lt;li&gt;Twitter / LinkedIn / google+ / app.net / Facebook - all for different things&lt;/li&gt;
+&lt;li&gt;Spotify / We Are Hunter for music&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bufferapp.com&quot;&gt;Buffer&lt;/a&gt; to queue my posts to social networks&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.flowdock.com/&quot;&gt;Flowdock&lt;/a&gt; - chat and aggregation tool used mainly with clients&lt;/li&gt;
+&lt;li&gt;Communications - mac messages app to talk over Gtalk &amp;amp; Skype&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;What do you use and find it good for? :wq&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>It's true what they say, spend more time doing Business Development</title>
+          <link href="http://kalv.co.uk/2013/01/23/its-true-what-they-say-spend-more-time-doing-business-development.html"/>
+          <updated>2013-01-23T08:17:00-08:00</updated>
+          <id>http://kalv.co.uk/2013/01/23/its-true-what-they-say-spend-more-time-doing-business-development</id>
+          <content type="html">&lt;p&gt;When working on a new startup idea, it&#39;s easy as a developer to get
+comfy working through the backlog and getting on with product delivery.&lt;/p&gt;
+
+&lt;p&gt;Someone in the team says or even in your own brain your hear:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Oh man this talking to customers/investors all day feels like
+we&#39;re not getting anywhere, screw this let&#39;s take 3 weeks out and get on
+with &lt;em&gt;really&lt;/em&gt; delivering our product by coding&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;I&#39;ve said it myself in the past. But I&#39;ve been learning recently that in
+early stages of product market fit that I should resist this urge.&lt;/p&gt;
+
+&lt;p&gt;Why? Because most of that development time you end up building features
+that you actually didn&#39;t need or even worse realize too late that
+customers don&#39;t want what you&#39;re building.&lt;/p&gt;
+
+&lt;p&gt;What do I do now? I take an idea in it&#39;s most basic form, enough to sell
+it to a real customer. The most minimum I need to sell
+it, even if it&#39;s just a verbal spiel then that&#39;s enough.&lt;/p&gt;
+
+&lt;p&gt;Take that bare minimum and speak to as many customers as I can find. If
+the verbal presentation is not enough then knock up some quick
+wireframes (don&#39;t code!) and walk through that with them.&lt;/p&gt;
+
+&lt;p&gt;I always remind myself to not speak with my peers or friends, trying hard to find &lt;em&gt;real&lt;/em&gt;
+customers. Friends will always be nice and say &quot;hmm yeah I&#39;d like that,
+use it&quot;.&lt;/p&gt;
+
+&lt;p&gt;This thinking has been great at stopping a direction quickly before
+wasting a couple of weeks/months developing out an idea or feature.&lt;/p&gt;
+
+&lt;p&gt;Taking this iterative approach makes sure we&#39;re only
+delivering the bare minimum until we get to taking a payment and not
+spending too much time deliberating on internal opinions on what&#39;s right or not.&lt;/p&gt;
+
+&lt;p&gt;The project then gets into an early strategy to talk early and to
+continue talking to the customers keeping us on track.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Founding a startup with a newborn, 2 year old and in a new city</title>
+          <link href="http://kalv.co.uk/2012/05/23/founding-a-startup-with-a-newborn-2-year-old-and-in-a-new-city.html"/>
+          <updated>2012-05-23T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2012/05/23/founding-a-startup-with-a-newborn-2-year-old-and-in-a-new-city</id>
+          <content type="html">&lt;p&gt;Founding a startup with a newborn, 2 year old and in a new city&lt;/p&gt;
+
+&lt;p&gt;Today I was talking to one of our advisors for &lt;a href=&quot;http://goodbits.co&quot;&gt;Goodbits&lt;/a&gt; and he called me ballsy to be building a startup, I started to wonder perhaps if what I&#39;m doing is actually stupid.  What is it that I&#39;m doing? Starting a company when I have two kids, one 2 year old and another that&#39;s 1 month old.  To add to that I&#39;ve moved to a new city.&lt;/p&gt;
+
+&lt;p&gt;My comment to most people that mention my situation is simply &lt;strong&gt;&quot;When is it ever a good time to build a company?&quot;&lt;/strong&gt;.  I&#39;ve found through my career that trying to build projects in my free time never get the time they require, they need day &amp;amp; night 24/7 attention.  So here I am building a startup and trying to be the family man that my Dad was with just a day job.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m writing this partly as a log of my current situation and to outline some productivity techniques I&#39;m doing to manage my time.&lt;/p&gt;
+
+&lt;h2&gt;One todo List&lt;/h2&gt;
+
+&lt;p&gt;I have one todo list, very much a getting things done list. This has at most 6 things and mainly only the &lt;strong&gt;most important things I need to do in a day&lt;/strong&gt;.  Currently I&#39;m using &lt;a href=&quot;http://www.realmacsoftware.com/clear/&quot;&gt;Clear&lt;/a&gt; on my iPhone for this because of it&#39;s simplicity and it&#39;s one list, one place. I like that it&#39;s one place, I wanted a simple list without tags, multiple lists, areas, projects.&lt;/p&gt;
+
+&lt;p&gt;This list contains both personal and business tasks, otherwise my &lt;strong&gt;personal tasks never get done&lt;/strong&gt;.  So for example top of my list this morning was to cancel our UK car insurance.  Then the second was to chase up a specific investor who was interested in our company.&lt;/p&gt;
+
+&lt;p&gt;We still use &lt;a href=&quot;http://pivotaltracker.com&quot;&gt;Pivotal Tracker&lt;/a&gt; to manage the user stories that need to be developed on our product and the way I start work on this is to put a high level task in my todo list to understand the theme on what I need to work on. So at the moment it&#39;s to work on the stories required to implement capturing twitter favourites, one task in my todo list that encapsulates a bunch of small tasks in Pivotal.&lt;/p&gt;
+
+&lt;h2&gt;Use less tools&lt;/h2&gt;
+
+&lt;p&gt;Something I&#39;ve been doing is trying to use less tools to manage parts of our bussines and as much as possible interact with everything I need from my inbox.  This means I don&#39;t have to store a task in my head to vist x for CRM, y for Support, z for exceptions on our application, etc.&lt;/p&gt;
+
+&lt;p&gt;We are using &lt;a href=&quot;http://intercom.io&quot;&gt;Intercom&lt;/a&gt; and &lt;a href=&quot;http://tenderapp.com/&quot;&gt;Tender&lt;/a&gt; for support at the moment and both come to the inbox and importantly I can reply back to customers striaght away.&lt;/p&gt;
+
+&lt;p&gt;Sure &lt;a href=&quot;http://basecamp.com&quot;&gt;Basecamp&lt;/a&gt; is great, but I want to have &lt;strong&gt;less places where information and discussion is taking place&lt;/strong&gt;, so I&#39;m happy that Basecamp sends me emails on that I need to engage with. That&#39;s how I interact with it, I very rarely visit basecamp.&lt;/p&gt;
+
+&lt;p&gt;In fact right now, I&#39;m working on something in which I can interact with media I share with my family via email, including comments. I don&#39;t want to visit &#39;insert popular choice of social network here&#39; all the time.&lt;/p&gt;
+
+&lt;h2&gt;Good inbox management&lt;/h2&gt;
+
+&lt;p&gt;J/K the hell out of my inbox.  I heavily &lt;strong&gt;use keyboard shortcuts in Gmail&lt;/strong&gt; and in Sparrow, pretty much why I use Sparrow.  The process for my email:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;J down through my email&lt;/li&gt;
+&lt;li&gt;If I need to action it and it can be done with a quick reply, do it.&lt;/li&gt;
+&lt;li&gt;Otherwise label (L on the keyboard) and then archive it (e) if I need to keep it otherwise delete&lt;/li&gt;
+&lt;li&gt;If i need to come back to it leave it in the inbox&lt;/li&gt;
+&lt;li&gt;Work through the longer emails either by putting tasks in my one todo list or leaving it there&lt;/li&gt;
+&lt;li&gt;If a day or two has been passed and I haven&#39;t done anything with an email left in the inbox, I just archive it&lt;/li&gt;
+&lt;li&gt;Inbox zero&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Having an empty inbox or near enough is good for me so that &lt;strong&gt;I procrastinate less&lt;/strong&gt; and get on with what needs to be done.&lt;/p&gt;
+
+&lt;h2&gt;Zero bugs&lt;/h2&gt;
+
+&lt;p&gt;This is something applicable to product development and something that was first told to me by a collegue of mine &lt;a href=&quot;http://twitter.com/beng&quot;&gt;Ben Griffiths&lt;/a&gt;. Simply &lt;strong&gt;don&#39;t store bugs in a tracker or backlog&lt;/strong&gt;, put them at the top of your backlog. Your product should not be broken so fix it immediately everything else is not important, you&#39;ll always have things to fix and improve. This encourages you to not stack up lots of bugs and force defining &#39;new feature&#39; requirements rather than bugs which can be better prioritized.&lt;/p&gt;
+
+&lt;p&gt;This means that we only worry about what we need to worry about, only until all the big things have been implemented and fixed do we get around to feeling the small things are important enough to work on.&lt;/p&gt;
+
+&lt;h2&gt;Calendar is key&lt;/h2&gt;
+
+&lt;p&gt;If I am to meet someone or do something important at a specific time, it&#39;s in the calendar, done.  This Calendar is sync&#39;d with my mobile so that when I make a meeting on the go, it&#39;s in the calendar, so that I meet it.&lt;/p&gt;
+
+&lt;h2&gt;Family Support&lt;/h2&gt;
+
+&lt;p&gt;This is quite specific to my situation, but it&#39;s something that I have and without it I wouldn&#39;t be able to do what I&#39;m doing. We have our Mother-in-Law help out look after the kids a little with my wife and help cook up the meals.  This is isn&#39;t something you can just sort out or ask for but I&#39;m very lucky to have this and have them support what I&#39;m doing.&lt;/p&gt;
+
+&lt;p&gt;That&#39;s it for now. Gotta go and spend some time with my kids and my lovely wife, something I do every day, go home, help with baths, play and read books before they sleep. Then back to the desk and computer.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Engaging with early users to learn Habits</title>
+          <link href="http://kalv.co.uk/2012/04/12/engaging-with-early-users-to-learn-habits.html"/>
+          <updated>2012-04-12T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2012/04/12/engaging-with-early-users-to-learn-habits</id>
+          <content type="html">&lt;p&gt;As I&#39;ve been working to get our startup &lt;a href=&quot;http://www.goodbits.co&quot;&gt;Goodbits&lt;/a&gt; up and running I&#39;ve been using many different tools to get as much insight on our customers activity. The one tool that I&#39;ve been using the most has been &lt;a href=&quot;http://www.kissmetrics.com&quot;&gt;Kissmetrics&lt;/a&gt; which has allowed me to look at specific events or actions that a user carried out on the site. Making it far more useful than the popular choice of &lt;a href=&quot;http://google.com/analytics&quot;&gt;Google Analytics&lt;/a&gt; or similar.&lt;/p&gt;
+
+&lt;p&gt;It has been very important to learn what daily habits our users are carrying out, so the better information I can compile the better I can deduce common usage patterns that I have to improve and refine. Check out &lt;a href=&quot;http://www.nirandfar.com/2012/04/hooking-users-in-3-steps.html?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+NirAndFar+%28Nir+and+Far+Blog%29&quot;&gt;this post from Nir&lt;/a&gt; which is an interesting read on Habit forming.&lt;/p&gt;
+
+&lt;p&gt;Now there is a new kid on the block and I&#39;m loving it. &lt;a href=&quot;http://intercom.io&quot;&gt;Intercom&lt;/a&gt;, a web app that is a CRM (Customer Relationship Management) Tool on my customers with some serious powerful features.&lt;/p&gt;
+
+&lt;h2&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;Like with most of these services, you drop in a javascript snippet into your application and then set a bunch of settings, the email address of your signed in user, etc. By default Intercom then records information like &#39;signed up&#39;, &#39;last seen at&#39;, the number of &#39;sessions&#39; &amp;amp; then looks up more information on that customer.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var intercomSettings = {
+  app_id: &#39;app_id&#39;,
+  email: &#39;john.doe@example.com&#39;, // TODO: User&#39;s e-mail address
+  created_at: 1234567890, // TODO: User&#39;s sign-up date, Unix timestamp
+  name: &#39;John Doe&#39;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The added lookup on information is that it uses &lt;a href=&quot;http://www.fullcontact.com/&quot;&gt;FullContact&lt;/a&gt; to link to their social media profiles, this gives you better insight of the type of user they are.  It&#39;s great, with a couple of clicks I can see what field this customer works in, how interactive they are with certain social media tools and better understand the types of customers we have using our product.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&quot;Whoa, this feels like getting a message from God&quot;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;It doesn&#39;t stop there, the interface is very well designed allowing me to filter by data stored for a user and then &lt;strong&gt;message&lt;/strong&gt; them, yep message them. Either directly so that when they next use my site a popup would appear or through email.&lt;/p&gt;
+
+&lt;p&gt;I&#39;ve always hated spam messages from an app I use, this filtering allows me to target specific behavior and I have seen that users engage back with us more than they would with a generic mail shot from &lt;a href=&quot;http://mailchimp.com/&quot;&gt;MailChimp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have more confidence that they will engage back with me. Intercom have a column in their app with a &lt;strong&gt;heart&lt;/strong&gt; in it for relationship.&lt;/p&gt;
+
+&lt;h2&gt;Getting more from Intercom&lt;/h2&gt;
+
+&lt;p&gt;You can also add custom information to intercom, which then allows you to further filter your users.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var intercomSettings = {
+  // .. add this
+  custom_data: {
+    &#39;invites sent&#39;: 4,
+    &#39;has added twitter service&#39;: true,
+    &#39;number of sections created&#39;: 5
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This can be quite intensive on your to render this data out on every request, so instead of caching it, I am posting this data in a scheduled task hourly using their API and &lt;a href=&quot;https://github.com/intercom/intercom-ruby&quot;&gt;Rubygem&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Auto Messaging&lt;/h2&gt;
+
+&lt;p&gt;You can now set up filters and then create an auto message which be sent out to customers that fall into that filter.  I am using this for some great scenarios, ones where I&#39;ve before written manual code to fire emails.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ask users why they haven&#39;t come back to our application after a period of time to better understand what it is we&#39;re not doing right&lt;/li&gt;
+&lt;li&gt;Send targeted messages describing what they can do with our tool that they haven&#39;t already enabled and if they didn&#39;t use those features, why.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Constantly improving&lt;/h2&gt;
+
+&lt;p&gt;They are adding improvements all the time, I wanted auto messages and it was something they released. I wanted to use my custom data in generated messages, deployed and notified. I wanted to easily see the number of emails being sent from their auto messages features, they updated the interface and deployed it. This reaction to customer needs is what I try to do with products I work on, so using a tool that do this for me, is satisfying.&lt;/p&gt;
+
+&lt;p&gt;I decided to write this post because Intercom is starting to become a must have for me in building web products. It&#39;s starting point in reviewing analytics is great, the customer.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>How a Ruby guy decided to add node.js to the mix</title>
+          <link href="http://kalv.co.uk/2012/01/17/how-a-ruby-guy-decided-to-add-nodejs-to-the-mix.html"/>
+          <updated>2012-01-17T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2012/01/17/how-a-ruby-guy-decided-to-add-nodejs-to-the-mix</id>
+          <content type="html">&lt;p&gt;I&#39;ve been a Ruby guy for over 4 years now and have always found the language fun and the frameworks suitable for building web based applications, I love it.&lt;/p&gt;
+
+&lt;p&gt;Since the release of &lt;a href=&quot;http://nodejs.org&quot;&gt;Node.js&lt;/a&gt; in 2009, I and my colleagues at
+&lt;a href=&quot;http://www.gofreerange.com&quot;&gt;GoFreeRange&lt;/a&gt; were very excited about the
+event loop, non-blocking IO goodness for scalability and speed on the
+web. We had even played on something to help
+&lt;a href=&quot;https://github.com/freerange/nodetest&quot;&gt;testing&lt;/a&gt; (was only for a day, just to learn more about the tech).&lt;/p&gt;
+
+&lt;p&gt;So I&#39;ve been looking for the right time to start developing a real
+application that benefits from what Node.js has to offer over what I can
+do quickly and efficiently in Ruby.&lt;/p&gt;
+
+&lt;p&gt;I have yet to see an API or website
+really need the scalability or speed offered by node.js over what I know
+with ruby, so I&#39;ve always chosen to use what I know, has good
+conventions and good maintainability.&lt;/p&gt;
+
+&lt;p&gt;But last week the time finally arrived where Node.js might be a better
+fit.&lt;/p&gt;
+
+&lt;p&gt;This won&#39;t be a post outlining benchmark metrics but just an overview of
+my findings and how I settled on Node.js for this specific need.&lt;/p&gt;
+
+&lt;h2&gt;The problem&lt;/h2&gt;
+
+&lt;p&gt;Our feed checking mechanism at &lt;a href=&quot;http://rsshero.com&quot;&gt;RSS Hero&lt;/a&gt; was built
+using &lt;a href=&quot;https://github.com/defunkt/resque&quot;&gt;Resque&lt;/a&gt; so that we could fetch
+multiple feeds and check them (making sure they are a feed). Then to
+subscribe with &lt;a href=&quot;http://superfeedr.com&quot;&gt;Superfeedr&lt;/a&gt; if successful.&lt;/p&gt;
+
+&lt;p&gt;This process was not fast enough for fetching lots of feeds, I found
+that activating a couple of users that each had 1000 subscriptions or so,
+it would stack up and take quite a while to churn through.&lt;/p&gt;
+
+&lt;p&gt;Even though I could increase the number of resque workers running in parallel I would end up using more memory on our limited production servers.&lt;/p&gt;
+
+&lt;p&gt;HTTP feed fetching is going to increase, one of our upcoming milestones
+is to take load away from superfeedr and fetch some feeds ourselves.&lt;/p&gt;
+
+&lt;h2&gt;Proposed Solutions&lt;/h2&gt;
+
+&lt;p&gt;To make this faster I needed to use less memory and be able to fetch
+multiple HTTP requests in parallel.  The shortlist that I came up with was:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubyeventmachine.com/&quot;&gt;Eventmachine&lt;/a&gt; &amp;amp;
+&lt;a href=&quot;https://github.com/igrigorik/em-http-request&quot;&gt;em-http-request&lt;/a&gt; - A ruby event loop allowing async processing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dbalatero/typhoeus&quot;&gt;Typhoeus&lt;/a&gt; - Http fetching using curb (curl)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nodejs.org&quot;&gt;Node.js&lt;/a&gt; - event driven, non-blocking IO&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;So to figure out which was best I set a time box of 1/2 day to spike on each method and learn about them.&lt;/p&gt;
+
+&lt;p&gt;With each test setup I used &lt;a href=&quot;http://redis.io/topics/pubsub&quot;&gt;Redis
+pubsub&lt;/a&gt; to push urls to be fetched onto a channel and have the fetching code consume that channel.  This would allow easy integration from the existing rails app.&lt;/p&gt;
+
+&lt;p&gt;Also to remove bandwidth fluctuations from my ISP I ran the tests on a
+&lt;a href=&quot;http://www.linode.com/&quot;&gt;Linode&lt;/a&gt; server.&lt;/p&gt;
+
+&lt;h2&gt;Eventmachine&lt;/h2&gt;
+
+&lt;p&gt;This was my first choice and I believed it would be good enough for our
+needs.  I would be able to use my existing tested ruby code for the feed
+checking and connect it to redis.&lt;/p&gt;
+
+&lt;p&gt;The first issue and main one was eventmachine kept on stalling.  When
+the sample data was loaded, the compatible redis library
+(&lt;a href=&quot;https://github.com/mloughran/em-hiredis&quot;&gt;em-hiredis&lt;/a&gt;) would read off
+all the messages off the pubsub channel and kick off http requests,
+responses then stopped after the first 100 requests.&lt;/p&gt;
+
+&lt;p&gt;I thought it might be an issue with trying to send too many requests at
+one time. So I tried using &lt;a href=&quot;https://github.com/igrigorik/em-synchrony&quot;&gt;em-synchrony&lt;/a&gt; which is a lovely library to allow synchronous control in the event loop, but it stopped the async nature of the http requesting so slowed it back down.&lt;/p&gt;
+
+&lt;p&gt;To better manage the concurrency I then tried to store the received urls from redis into a shared
+variable and then poll that collection (EM::PeriodicTimer) and only fire
+off a limited amount of http requests. This worked well until 300-400
+requests were sent, again eventmachine stalled for a 1-5 secs and then
+came back again.&lt;/p&gt;
+
+&lt;p&gt;After spending a bit of time debugging and digging into my limited
+knowledge of Eventmachine and em-http I couldn&#39;t see what was happening. All I could
+see was that the event loop was not &#39;ticking&#39;, the timer was not firing
+so maybe something had blocked the IO loop. Using 1000 requests to a
+localhost web address worked fine, so maybe it was something in the
+network layer, maybe an address not returning, DNS hanging. I did find
+evidence to show that the HTTP Connection was &lt;a href=&quot;https://github.com/igrigorik/em-http-request/blob/master/lib/em-http/http_connection.rb#L75&quot;&gt;not fully
+asynchronous&lt;/a&gt; so
+perhaps one or a couple of network connections were blocking.&lt;/p&gt;
+
+&lt;p&gt;I fiddled with adding timeout settings to the http request but nothing
+stopped hitting this stall.&lt;/p&gt;
+
+&lt;p&gt;With my limited time for this spike and this stability issue I moved on.&lt;/p&gt;
+
+&lt;h2&gt;Typhoeus&lt;/h2&gt;
+
+&lt;p&gt;I have used curb before for fast feed fetching at
+&lt;a href=&quot;http://twitterfeed.com&quot;&gt;Twitterfeed&lt;/a&gt;, where I used a modified
+&lt;a href=&quot;https://github.com/kalv/feedzirra&quot;&gt;feedzirra&lt;/a&gt; that allowed multiple http feed fetching, this worked very well at the time.&lt;/p&gt;
+
+&lt;p&gt;Comparing this though to the speed I was getting with Eventmachine it
+was slow, a fire off of 10 http requests would still wait for them all
+to return, which was too slow.&lt;/p&gt;
+
+&lt;p&gt;Again I had to manage my own concurrency when reading urls to be fetched
+from redis.&lt;/p&gt;
+
+&lt;p&gt;This being too slow, I moved on to node.js.&lt;/p&gt;
+
+&lt;h2&gt;Node.js&lt;/h2&gt;
+
+&lt;p&gt;Already knowing javascript, I got it running pretty quickly and the
+responses came through fast. I can&#39;t say exactly but it responses for
+for the first hundre came through a lot quicker and it stayed
+consistently fast.&lt;/p&gt;
+
+&lt;p&gt;I didn&#39;t have to worry about concurrency control, internally node.js
+seemed to manage and handle the requests fine.&lt;/p&gt;
+
+&lt;p&gt;I had to write my own code to handle redirects and to put a cap on how
+many to follow before throwing an exception as I was using the http
+request library included in Node.js.&lt;/p&gt;
+
+&lt;p&gt;The results from the little testing on Node.js was amazing. It felt
+solid and fast. This was enough for me to take the plunge and deploy
+some node.js.&lt;/p&gt;
+
+&lt;h2&gt;To Summarize&lt;/h2&gt;
+
+&lt;p&gt;I chose to use node.js because it was faster, stable and used a lower
+memory footprint on my server.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rsshero.com&quot;&gt;RSS Hero&lt;/a&gt; is now using node.js for it&#39;s http
+fetching and memory usage has reduced from 400mb of RAM to 20mb and it&#39;s a lot faster.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Turn off annoying Skype auto gain</title>
+          <link href="http://kalv.co.uk/2011/11/24/turn-off-annoying-skype-auto-gain.html"/>
+          <updated>2011-11-24T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2011/11/24/turn-off-annoying-skype-auto-gain</id>
+          <content type="html">&lt;p&gt;If you like me use Skype quite bit for calls or coding together with
+other developers, you might find that when you&#39;re quiet Skype tries to be
+clever and automatically increase the microphone gain.  This is crap as
+it starts to pick up the background noise.&lt;/p&gt;
+
+&lt;p&gt;You can&#39;t easily turn off automatic gain control in Skype, it&#39;s a
+setting you can apply in a xml file.  Hunting around I found the
+solution again and this time I&#39;ve stuck in a gist in case you want to
+try it too.  Try it, even if you have a headset with a microphone built
+in, this makes a difference.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1391982.js?file=gistfile1.txt&quot;&gt;&lt;/script&gt;
+
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Learning Ruby / Rails</title>
+          <link href="http://kalv.co.uk/2011/11/23/learning-ruby--rails.html"/>
+          <updated>2011-11-23T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2011/11/23/learning-ruby--rails</id>
+          <content type="html">&lt;p&gt;I&#39;m often asked about where to go and what to read to learn
+about Rails.  In fact just the other day, so I&#39;m going to outline some
+details here so to not repeat myself in the future or even forget!  This
+is not a definitive guide but rather some links to things you should
+read and think about.&lt;/p&gt;
+
+&lt;h2&gt;Learn Ruby&lt;/h2&gt;
+
+&lt;p&gt;Sure you can go on right ahead and start with Rails and start building a
+web application but if you&#39;re unfamilar with Ruby then please take the
+time to learn the basics, it will help considerably.&lt;/p&gt;
+
+&lt;p&gt;There are quite a few places you could learn about Ruby, books being one
+of them, here are some of my favourites.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Why&#39;s_(poignant)_Guide_to_Ruby&quot;&gt;why&#39;s (poignant) Guide to
+Ruby&lt;/a&gt;
+This is a different kind of programming book, it&#39;s distributed
+under Creative Commons and has some interestig cartoon graphics to go
+through Ruby.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubykoans.com/&quot;&gt;Ruby Koans&lt;/a&gt; Created by &lt;a href=&quot;http://twitter.com/jimweirich&quot;&gt;Jim
+Weirich&lt;/a&gt; and
+&lt;a href=&quot;http://twitter.com/objo&quot;&gt;Joe O&#39;Brien&lt;/a&gt; this is a hands on way to learn
+more about Ruby it&#39;s a test driven approach for you to learn Ruby&#39;s
+internals.  I myself still use these tests to remind me or even learn
+about things I didn&#39;t know about.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Test Ruby&lt;/h2&gt;
+
+&lt;p&gt;Most guides on the web don&#39;t include tests.  And what I mean about tests
+is using &lt;a href=&quot;http://rspec.info/&quot;&gt;rspec&lt;/a&gt;, &lt;a href=&quot;http://www.ruby-doc.org/stdlib-1.9.2/libdoc/test/unit/rdoc/Test/Unit.html&quot;&gt;test unit&lt;/a&gt;, &lt;a href=&quot;http://cukes.info/&quot;&gt;cucumber&lt;/a&gt; to progamatically test your
+application.  Not having someone click through the site or pages.  The
+importance of testing isn&#39;t directly required to learning about ruby or
+rails BUT will help you in understanding what&#39;s going on (like the Ruby
+Koans) and get you into a good practise when developing your application.&lt;/p&gt;
+
+&lt;h2&gt;Rails&lt;/h2&gt;
+
+&lt;p&gt;To learn about the rails framework and it&#39;s make up check out these
+sources, there are some great screencasts you can now watch.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://peepcode.com&quot;&gt;Peepcode&lt;/a&gt; - Is paid but worth it. Even watching some of the
+play by play is a good watch to see how others work.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://railscasts.com&quot;&gt;Railscasts&lt;/a&gt; - Very good free and now has pro content on how to do
+common things in rails. Has good screencasts on commonly used gems
+that enhances rails.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://guides.rubyonrails.org/&quot;&gt;Rails Guides&lt;/a&gt; - is a good source of
+information too on the rails framework.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;News and updates&lt;/h2&gt;
+
+&lt;p&gt;I found it helpful to follow some sources for updates
+on what gems are out there or new gems that do something clever.  Here are some that I
+followed for this and still do.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubyflow.com&quot;&gt;RubyFlow&lt;/a&gt; - a good source for new information on Ruby/Rails&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ruby5.envylabs.com/&quot;&gt;Ruby5 Podcast&lt;/a&gt; - I used to listen to listen to podcasts quite a bit when I had time, but have stopped now. Give it a go, sometimes it quite good to hear discussion on implementation decisions and justificiation on gem use.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pivotallabs.com/blabs&quot;&gt;Pivotal Blabs&lt;/a&gt; - This is a blog ran by Pivotal Labs where they share great little tips from their standups.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Edit:&lt;/h2&gt;
+
+&lt;p&gt;On twitter @taylorbuley &lt;a href=&quot;https://twitter.com/#!/taylorbuley/status/139389431919546368&quot;&gt;comments&lt;/a&gt; to see also &lt;a href=&quot;http://codeacademy.com/#!/exercise/0&quot;&gt;Codeacademy.com&lt;/a&gt; which seems to be for learning javascript - might eventually have some Ruby, still worth a look if you want to understand javascript.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Making Textmate play nice with RVM</title>
+          <link href="http://kalv.co.uk/2011/07/27/making-textmate-play-nice-with-rvm.html"/>
+          <updated>2011-07-27T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2011/07/27/making-textmate-play-nice-with-rvm</id>
+          <content type="html">&lt;p&gt;I finally sat down for a while this morning to get &lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;RVM&lt;/a&gt; working well with &lt;a href=&quot;http://macromates.com/&quot;&gt;Textmate&lt;/a&gt; ruby running commands.  Whilst pairing with the team at &lt;a href=&quot;http://gofreerange.com&quot;&gt;GoFreeRange&lt;/a&gt; we tend to stay in Textmate, write tests and then run them from there.  But recently using RVM and .rvmrc config files within 1.9.2 projects we haven&#39;t been able to get the tests to run.&lt;/p&gt;
+
+&lt;p&gt;To make it easier than creating a &lt;a href=&quot;https://rvm.beginrescueend.com/integration/textmate/&quot;&gt;textmate rvm wrapper&lt;/a&gt;, I run rvm so that it sets up the right ruby and paths.  Then check if there is a &lt;code&gt;.rvmrc&lt;/code&gt; and take that into account.&lt;/p&gt;
+
+&lt;p&gt;I add these two lines to any Textmate commands (Bundles -&gt; Bundle Editor -&gt; Edit Commands...) for example the &lt;code&gt;Ruby -&amp;gt; Run&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[ -f &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;amp;&amp;amp; . &quot;$HOME/.rvm/scripts/rvm&quot;
+[[ -f &quot;$TM_PROJECT_DIRECTORY/.rvmrc&quot; ]] &amp;amp;&amp;amp; . &quot;$TM_PROJECT_DIRECTORY/.rvmrc&quot;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Small things I like about HTML 5</title>
+          <link href="http://kalv.co.uk/2011/06/14/small-things-i-like-about-html-5.html"/>
+          <updated>2011-06-14T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2011/06/14/small-things-i-like-about-html-5</id>
+          <content type="html">&lt;p&gt;Most people are talking about the big things that HTML 5 is bringing to the table, video, audio, Websockets APIs, etc. I thought I&#39;d share a small selection of the small attributes that I&#39;ve used so far.&lt;/p&gt;
+
+&lt;h3&gt;the placeholder attribute&lt;/h3&gt;
+
+&lt;p&gt;You can now add the placeholder attribute on form input elements. This will then display the text until the user provides focus to the input element.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; placeholder=&quot;Enter your email address&quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wow this has made things so much easier. No more extra javascript to remove the value when clicked and then put it back when the user clicks away and it&#39;s empty, blah di blah.&lt;/p&gt;
+
+&lt;h3&gt;email input type&lt;/h3&gt;
+
+&lt;p&gt;To better improve what I wrote above, you can now define an email type on input elements. Allowing mobile browsers to show a different keyboard for those elements.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;email&quot; placeholder=&quot;Enter your email address&quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are more wonderful attributes to provide browsers with better information on what needs to be entered like &#39;min&#39; and &#39;step&#39; for &#39;number&#39; type input elements. All good stuff, it&#39;s great to see browsers implementing more behaviour on the structure of webpages.&lt;/p&gt;
+
+&lt;h3&gt;the cache manifest&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE HTML&amp;gt;
+&amp;lt;html manifest=&quot;/cache.manifest&quot;&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Test&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&quot;application.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Offline web pages made simple. Simply add the manifest attribute to html pointing to a web served file. This will setup which files will be available offline. So for this example a file &#39;cache.manifest&#39; would be created.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CACHE MANIFEST 
+/application.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can even define what is required for network access or even just point to an offline page. Nice.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CACHE MANIFEST
+FALLBACK:
+/ /offline.html
+NETWORK:
+*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This file has to be served as type &#39;text/cache-manifest&#39;. Read more on cache manifest at  &lt;a href=&quot;http://diveintohtml5.org/offline.html&quot;&gt;diveintohtml5.org&lt;/a&gt;. If you use Ruby checkout &lt;a href=&quot;https://github.com/wycats/rack-offline&quot;&gt;Rack::Offline&lt;/a&gt; to help manage your offline files.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Fastest Ruby RSS Parser?</title>
+          <link href="http://kalv.co.uk/2010/12/10/fastest-ruby-rss-parser.html"/>
+          <updated>2010-12-10T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2010/12/10/fastest-ruby-rss-parser</id>
+          <content type="html">&lt;p&gt;I was working on a project the other day that needed to parse a lot of RSS feeds and would need to poll &amp;amp; parse them frequently. So once again I had the question &#39;which ruby rss parser should i use?&#39; in my mind.&lt;/p&gt;
+
+&lt;p&gt;Back when I was working for &lt;a href=&quot;http://twitterfeed.com&quot;&gt;twitterfeed&lt;/a&gt; we performed some testing to find the optimal library that could fetch and parse the feeds fast. It was found then that &lt;a href=&quot;https://github.com/pauldix/feedzirra&quot;&gt;Feedzirra&lt;/a&gt; performed the best as you could use a multiple fetch using &lt;a href=&quot;http://curb.rubyforge.org/&quot;&gt;curb&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For now I only wanted to know how fast these libraries would just parse the feeds, I was not worried about the http fetching.&lt;/p&gt;
+
+&lt;p&gt;I had some time so I returned to a nice performance test suite created by &lt;a href=&quot;https://github.com/julien51&quot;&gt;Julien Genestoux&lt;/a&gt; of &lt;a href=&quot;http://superfeedr.com/&quot;&gt;Superfeedr&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I forked the suite, updated it to use bundler, order the results and to use the latest gems and then re-ran the performance test. You can find my fork &lt;a href=&quot;https://github.com/kalv/ruby-feed-parser-benchmark&quot;&gt;here&lt;/a&gt; if you are interested.&lt;/p&gt;
+
+&lt;p&gt;The results were (ran on my macbook pro 2.53ghz, 4gb ram, SSD):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ruby feed-parser-bench.rb 1000
+
+feedzirra =&amp;gt; Average: 0.0278322427572428 (0 errors) RSS: 0.0260872052845528 Atom: 0.0295189980353635
+mrss =&amp;gt; Average: 0.042981384305835 (7 errors) RSS: 0.039129512244898 Atom: 0.0467262599206349
+syndication =&amp;gt; Average: 0.0495069849548646 (4 errors) RSS: 0.0398204020408163 Atom: 0.0588687712031558
+rfeedparser =&amp;gt; Average: 0.452556951048951 (0 errors) RSS: 0.389084115853658 Atom: 0.513909868369352
+simplerss =&amp;gt; Average: 1.29865328871129 (0 errors) RSS: 0.20822887195122 Atom: 2.35265881532417
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result was simple - Feedzirra was still the fastest.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Playing with Macvim</title>
+          <link href="http://kalv.co.uk/2010/11/29/playing-with-macvim.html"/>
+          <updated>2010-11-29T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2010/11/29/playing-with-macvim</id>
+          <content type="html">&lt;p&gt;I have been spending some time over the last week of so with macvim. Thought I&#39;d share my experiences so far.&lt;/p&gt;
+
+&lt;h3&gt;Why&lt;/h3&gt;
+
+&lt;p&gt;I wanted to play around with VIM again really, one day a team member reminded me of the &#39;c-w&#39; vim command when working on a server (it clears the word from the start of it). At this point I remembered the power that vim has and I wanted to get back to that and see if it would make it easier for me to edit and write code.&lt;/p&gt;
+
+&lt;p&gt;I also felt a frustration when moving from keyboard to mouse. Could I be as productive and not have to touch the mouse (perhaps still use to explore around a project directories).&lt;/p&gt;
+
+&lt;p&gt;Some people could argue these pains might not be enough to justify switching or spending the time to learn a new tool. I just thought I&#39;d give it a try, I can always switch back to my long time home &lt;a href=&quot;http://macromates.com/&quot;&gt;textmate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Setting it up&lt;/h3&gt;
+
+&lt;p&gt;I simply installed macvim through &lt;a href=&quot;https://github.com/mxcl/homebrew&quot;&gt;homebrew&lt;/a&gt; &lt;code&gt;brew install macvim&lt;/code&gt;. If you don&#39;t use homebrew to manage your packages on your mac, i seriously advise you to look into it.&lt;/p&gt;
+
+&lt;p&gt;Once that was installed I installed the color &lt;a href=&quot;http://blog.infinitered.com/entries/show/8&quot;&gt;IR_Black_theme&lt;/a&gt; to make it look a bit prettier than the default (I prefer dark backgrounds).&lt;/p&gt;
+
+&lt;p&gt;I pulled parts of the &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gvimrc&lt;/code&gt; from this &lt;a href=&quot;https://github.com/railsjedi/vimconfig&quot;&gt;repo from railsjedi&lt;/a&gt; (found by just searching github for macvim).&lt;/p&gt;
+
+&lt;p&gt;The main plugins I installed were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ack.vim&lt;/code&gt;: Allows me to search the project using ack, similar to AckMate. To use it in vim I would &lt;code&gt;:Ack search_for_this&lt;/code&gt;, i have now setup a mapping for my lead key and character (a shortcut really to the command)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bufexplorer.vim&lt;/code&gt;: This is a neat way to browse what files you have open in the buffer. I use this with a lead key shortcut too. Allowing quick switching files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rails.vim&lt;/code&gt;: A rails plugin that really I find the syntax highlighting helpful, it does provide other things but i haven&#39;t used them much.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;A note on NERDTree, I started using this plugin which helps with directory navigating. But dropped it to use the included netrw in vim, it seems to do everything I need for now and thought it best to learn as much of the real tool as possible.&lt;/p&gt;
+
+&lt;p&gt;So on to the findings.&lt;/p&gt;
+
+&lt;h3&gt;:( Go to File / Peepopen&lt;/h3&gt;
+
+&lt;p&gt;The first thing that became apparent was not having a &lt;code&gt;Go to File&lt;/code&gt;, the Command-T option that would list the files in your directories and allow you to quickly go to a file.&lt;/p&gt;
+
+&lt;p&gt;I have been using &lt;a href=&quot;http://peepcode.com/products/peepopen&quot;&gt;peepopen&lt;/a&gt; in textmate for this and it works with macvim! You simply switch the editor and reload, works really easily.&lt;/p&gt;
+
+&lt;h3&gt;:) Love split screen&lt;/h3&gt;
+
+&lt;p&gt;Splitting the code on a 23&quot; screen helps for both showing test with code and view with controllers/models. I think this is a preference thing, I myself like it. Even when just learning new code from a project having the ability to have multiple windows makes it easier.&lt;/p&gt;
+
+&lt;h3&gt;&lt;em&gt;:)&lt;/em&gt; Shortcuts for text and visual mode&lt;/h3&gt;
+
+&lt;p&gt;To remove and move text with commands on the keyboard is probably the most thing i&#39;ve used. Having the ease to delete to the end of line and start writing, delete just the word or a couple and then having the visual mode helps too. Sure there is shift select in textmate for visual mode, but holding down the shift sometimes (not all) is annoying.&lt;/p&gt;
+
+&lt;h3&gt;:( Running tests&lt;/h3&gt;
+
+&lt;p&gt;When in a rails project using textmate I would always run a focussed test and window popup would open. With the vim setup I haven&#39;t found an easy way to do this. I have to switch to a terminal and run the test: &lt;code&gt;ruby -Itest test/blah -n &#39;/the test to focus on/&#39;&lt;/code&gt;. This slows things down a little by only the fact that running a new focussed test means writing out the matcher, obviously repeating a test is quick, just means alt-tab, up and bang to run the command again.&lt;/p&gt;
+
+&lt;h3&gt;:( No markdown preview&lt;/h3&gt;
+
+&lt;p&gt;Recently I&#39;ve found myself writing more markdown and liked the ability to preview the page in textmate. Haven&#39;t really looked if there is anything nice for vim on this.&lt;/p&gt;
+
+&lt;h3&gt;:( Esc to complete&lt;/h3&gt;
+
+&lt;p&gt;I barely used this in textmate, but have found myself wanting it now and then. It autocompleted the word you were writing when you pressed esc.&lt;/p&gt;
+
+&lt;h3&gt;:/ To tab or not tab.&lt;/h3&gt;
+
+&lt;p&gt;I&#39;m finding it hard to decide on whether to open files in multiple tabs or to just switch between the buffers, this just get&#39;s messy that&#39;s all, i will eventually figure it out.&lt;/p&gt;
+
+&lt;h3&gt;:) Even more fun to code&lt;/h3&gt;
+
+&lt;p&gt;Learning something new with vim is fun and adds to the fun of doing the work I do. So for me this is a plus.&lt;/p&gt;
+
+&lt;h3&gt;:) Remote developing.&lt;/h3&gt;
+
+&lt;p&gt;I love the potential of using vim not just the macvim version on remote machines for pair development or even lightweight client&#39;s being able to develop by using a remove machine having components installed (ipad for example).&lt;/p&gt;
+
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;I&#39;m going to continue using Macvim, as I&#39;m loving what you can do to the text in visual mode and the ability to delete and move lines/words around on the keyboard.&lt;/p&gt;
+
+&lt;p&gt;What do you think? Would you try or already use Macvim? Have any tipes?&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>LRUG talk on websockets</title>
+          <link href="http://kalv.co.uk/2010/11/10/lrug-talk-on-websockets.html"/>
+          <updated>2010-11-10T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2010/11/10/lrug-talk-on-websockets</id>
+          <content type="html">&lt;p&gt;I had the pleasure of giving a talk at &lt;a href=&quot;http://lrug.org&quot;&gt;LRUG&lt;/a&gt; this month on &lt;a href=&quot;http://en.wikipedia.org/wiki/WebSockets&quot;&gt;Websockets&lt;/a&gt; and &lt;a href=&quot;http://github.com/lifo/cramp&quot;&gt;Cramp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I had some great fun using &lt;a href=&quot;https://github.com/schacon/showoff&quot;&gt;Showoff&lt;/a&gt; creating the slides. It allows you to write the slides in markdown and serve them using Sinatra and some awesome javascript to make things look pretty. Making it full screen with Chrome worked a charm.&lt;/p&gt;
+
+&lt;p&gt;You can find the slides over at &lt;a href=&quot;http://github.com/kalv/lrug-websockets&quot;&gt;http://github.com/kalv/lrug-websockets&lt;/a&gt; and the example chat app that I built over at &lt;a href=&quot;http://github.com/kalv/yact&quot;&gt;http://github.com/kalv/yact&lt;/a&gt;.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Stop being clever Capybara</title>
+          <link href="http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html"/>
+          <updated>2010-10-27T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2010/10/27/stop-being-clever-capybara</id>
+          <content type="html">&lt;p&gt;Today we realised that there was a bunch of functionality being tested that didn&#39;t work when javascript was disabled and had to spend a while figuring it out.&lt;/p&gt;
+
+&lt;p&gt;We found that it was because of the Rails 3 ability to make links become either HTTP DELETE or POST requests. So when creating a link in rails like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;link_to &quot;Delete blog post&quot;, blog_post(@blog), :method =&amp;gt; :delete
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It would output into a html link:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&quot;/blog/1&quot; data-method=&quot;delete&quot;&amp;gt;Delete blog post&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;data-method&lt;/code&gt; is a &lt;a href=&quot;http://ejohn.org/blog/html-5-data-attributes/&quot;&gt;HTML5 custom attribute&lt;/a&gt; by the looks of things. When the page is loaded the default &lt;code&gt;rails.js&lt;/code&gt; javascript adds an event handler to those link elements to turn it into a form that will actually send a DELETE http request when it is clicked.&lt;/p&gt;
+
+&lt;p&gt;When testing these links in &lt;a href=&quot;http://github.com/jnicklas/capybara&quot;&gt;Capybara&lt;/a&gt; (an integration testing framework) for some reason it performs this javascript behaviour within it&#39;s &lt;a href=&quot;http://github.com/jnicklas/capybara/commit/58d4d0ca&quot;&gt;rack-test driver&lt;/a&gt;. &lt;strong&gt;Isn&#39;t this wrong?&lt;/strong&gt; Shouldn&#39;t integration testing be just clicking through the site when javascript is disabled. And when you want to test javascript you use a javascript driver explicitly, like you can in cucumber and capybara:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@javascript
+    Scenario: do something AJAXy
+      When I click the AJAX link
+      ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This magic that capybara performs would lead a developer into believing that those links work without javascript but they don&#39;t. Sure some people might say why worry about it, most browsers now know about javascript, but what happens if someone chooses to turn it off or it&#39;s disabled for other reasons.&lt;/p&gt;
+
+&lt;p&gt;Moving forward I&#39;m going to try and steer clear from using the &#39;:method =&gt; :delete&#39; in rails or monkey patch capybara to stop it changing the test request based on the &#39;data-method&#39;.&lt;/p&gt;
+
+&lt;script src=&quot;http://gist.github.com/649000.js?file=capybara_monkey_patch.rb&quot;&gt;&lt;/script&gt;
+
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Git commit all deleted files</title>
+          <link href="http://kalv.co.uk/2010/10/21/git-commit-all-deleted-files.html"/>
+          <updated>2010-10-21T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2010/10/21/git-commit-all-deleted-files</id>
+          <content type="html">&lt;p&gt;When deleting a folder or a bunch files from a project that uses &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; I&#39;ve always added the deleted files manually. &lt;code&gt;git add .&lt;/code&gt; never staged those deletions.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;http://chrisroos.co.uk&quot;&gt;Chris&lt;/a&gt; today, finally found out a way to just stage all the deleted files. Simply:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git add -u
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From &lt;code&gt;man git-add&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-u, --update
+
+Only match &amp;lt;filepattern&amp;gt; against already tracked files in the index rather than the working tree. That means that it will
+never stage new files, but that it will stage modified new contents of tracked files and that it will remove files from the
+index if the corresponding files in the working tree have been removed.
+
+If no &amp;lt;filepattern&amp;gt; is given, default to &quot;.&quot;; in other words, update all tracked files in the current directory and its subdirectories.
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Testing (TDD) in early Tech Startups?</title>
+          <link href="http://kalv.co.uk/2010/01/21/testing-tdd-in-early-tech-startups.html"/>
+          <updated>2010-01-21T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2010/01/21/testing-tdd-in-early-tech-startups</id>
+          <content type="html">&lt;p&gt;As a developer and working on early stage startups I always debate with founders on whether to follow Test Driven Development (TDD) or to just code the idea up and get it out, then later to write tests. I&#39;m going to outline some things that I&#39;ve found to be advantages and disadvantages.&lt;/p&gt;
+
+&lt;p&gt;First I will say that I&#39;m talking about very early stage tech startups, that haven&#39;t got a clear idea of how their product will work, revenue/funding or might fail fast due to realisation of one of the many factors, market not ready, target audience don&#39;t understand it and won&#39;t, low budget runway, etc.&lt;/p&gt;
+
+&lt;h2&gt;Advantages of using TDD&lt;/h2&gt;
+
+&lt;h3&gt;Changes are faster&lt;/h3&gt;
+
+&lt;p&gt;When a developer wants to change something which you will in a startup, it will be easier with a fully tested application. You will also catch those annoying bugs in unforeseen area of the product when something is changed in another.&lt;/p&gt;
+
+&lt;h3&gt;Less time to fix bugs&lt;/h3&gt;
+
+&lt;p&gt;When trying to fix a bug the developer will be able to isolate the area of code quicker, refactor (change) the code, run tests until it&#39;s fixed quickly.&lt;/p&gt;
+
+&lt;h3&gt;Quicker developer uptake&lt;/h3&gt;
+
+&lt;p&gt;If you have to get another developer to work on the code having tests will make it far easier for them to understand what&#39;s what and make them feel confident to go in and develop because the tests will catch bad things that might happen.&lt;/p&gt;
+
+&lt;h3&gt;Bugs are bad!&lt;/h3&gt;
+
+&lt;p&gt;Having bugs appear to a limited startup user base isn&#39;t good. Seeing a bug might turn them away, thinking it&#39;s not solid enough, but they might still stick with you if the idea is great, would they be acceptable?&lt;/p&gt;
+
+&lt;h2&gt;Disadvantages of using TDD&lt;/h2&gt;
+
+&lt;h3&gt;Time&lt;/h3&gt;
+
+&lt;p&gt;This is the most common talked about issue of fully testing projects. There is an amount of time used up making sure an application is tested. Testing frameworks to be incorporated into the codebase, mocks, test helpers for common actions in an application, this can be mostly at the beginning of the project but can take up essential time.&lt;/p&gt;
+
+&lt;h3&gt;You might have a hero&lt;/h3&gt;
+
+&lt;p&gt;The startup your creating might have a hero (rockstar) coder. One who can just get things out quickly and not bother with tests, therefore saving time to quickly change things and get user feedback. People wanting to make money love heros, for obvious reasons. But I personally think they are bad. If your project takes off and you need a team to carry it, it becomes difficult as that one hero becomes a bottleneck. Check Alex Payne&#39;s great article on Don&#39;t be a hero for more.&lt;/p&gt;
+
+&lt;h3&gt;Money&lt;/h3&gt;
+
+&lt;p&gt;Startups have limited time, I touched on this above. A quick line of code, hack, etc might be needed very quickly for an important pitch or press release, and if some tests don&#39;t pass but the front end of the application works fine, then it might be fine.&lt;/p&gt;
+
+&lt;h3&gt;Bugs are acceptable?&lt;/h3&gt;
+
+&lt;p&gt;I wrote that bugs are bad, but some issues might be acceptable to the founders of the startup. Ones were it might affect only 2% of the users or appear once in a while. Therefore it&#39;s ok to not test or have existing tests fail.&lt;/p&gt;
+
+&lt;h3&gt;What do I do?&lt;/h3&gt;
+
+&lt;p&gt;I take each project as they come but push to using testing on all projects. But some people find that this wastes time. So one strategy I&#39;ve found work well is to test the complex areas of the application and importantly test what the user will see (the front end integration).&lt;/p&gt;
+
+&lt;p&gt;Using integration frameworks like &lt;a href=&quot;http://cukes.info/&quot;&gt;Cucumber&lt;/a&gt;, where it revolves around end user features is great. As it allows the parts of the application exposed to the users to be fully tested but for the detailed tests internally to be compromised.&lt;/p&gt;
+
+&lt;p&gt;Did I miss something, what do you do?&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>My face in wired uk</title>
+          <link href="http://kalv.co.uk/2009/11/10/my-face-in-wired-uk.html"/>
+          <updated>2009-11-10T00:00:00-08:00</updated>
+          <id>http://kalv.co.uk/2009/11/10/my-face-in-wired-uk</id>
+          <content type="html">&lt;p&gt;When Wired came out in the UK a couple of months ago, I thought it would be cool to get in there for some of the work I do. The other month I was asked to be in a photo shoot about the work I&#39;ve been doing in the twitter world as a developer for projects.&lt;/p&gt;
+
+&lt;p&gt;If you didn&#39;t buy the copy that came out in Nov 09 you can check out the crazy yellow shirt I wore &lt;a href=&quot;http://www.wired.co.uk/wired-magazine/archive/2009/12/start/wired&#39;s-guide-to-the-uk-twitterati.aspx&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It mentions Twitterfeed, where i&#39;ve been working with the team to re-architect their back-end to support realtime, we have implemented Pubsubhubbub subscriptions and will be looking into handling RssCloud too soon.&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>Saving HTTP requests for testing</title>
+          <link href="http://kalv.co.uk/2009/10/13/saving-http-requests-for-testing.html"/>
+          <updated>2009-10-13T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2009/10/13/saving-http-requests-for-testing</id>
+          <content type="html">&lt;p&gt;I have been working with quite a few HTTP API services, so testing has been fun. Setting up lots of mock responses from URL endpoints.&lt;/p&gt;
+
+&lt;p&gt;Some gems like, twitter, bitly, etc have the URL&#39;s hidden in their guts and without reading around the twitter/bitly api docs you won&#39;t know, to help and save time I wrote this module to help override net/http and save the http response. The ruby library net/http seems to be used in most gems.&lt;/p&gt;
+
+&lt;p&gt;You can include the http headers (haven&#39;t tested fully and loading), for testing redirects/errors. Thought I&#39;d share with others and see if you find it useful.&lt;/p&gt;
+
+&lt;script src=&quot;http://gist.github.com/209380.js&quot;&gt;&lt;/script&gt;
+
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>How to beat the pirates</title>
+          <link href="http://kalv.co.uk/2009/06/17/how-to-beat-the-pirates.html"/>
+          <updated>2009-06-17T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2009/06/17/how-to-beat-the-pirates</id>
+          <content type="html">&lt;p&gt;I have been talking and debating on downloading pirate videos and music for a while now, I think it would stop if there was a quick, easy and cheap alternative. Reading the &lt;a href=&quot;http://en.wikipedia.org/wiki/Digital_Britain&quot;&gt;Digital Britain&lt;/a&gt; full report today a point made me want to post this and find out what others think.&lt;/p&gt;
+
+&lt;p&gt;People that download the content whether that be music or video are partly doing this out of simplicity and convenience. For example going to the movies to some might be expensive, time consuming, have bad experiences (noises, damn kids) but downloading a DVD copy of film not long after is seen as easy and simple with the sites and tools that are out there. Where are the alternatives? Why can&#39;t people go to an application that serves high quality films, cheap with fast bandwidth pipes guaranteeing quick downloads, discounts, etc. If this was available I believe everyone will flock to it, like how purchasing of music through iTunes has taken off.&lt;/p&gt;
+
+&lt;p&gt;Reading through the Digital Britain report under the exec summary (not sure if i&#39;ll get through the whole thing), point 45 talks about tackling Piracy and downloads, I look forward enthusiastically to:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&quot;The objective of the Government’s policy is therefore three-fold. Firstly, to provide a framework that encourages the growth of legal markets for downloading that are inexpensive, convenient and easily accessible for consumers.&quot;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;To provide a framework that encourages of legal markets and services is key, couldn&#39;t agree more. What do you think?&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+    
+      <entry>
+          <title>My Guardian Mashup</title>
+          <link href="http://kalv.co.uk/2009/03/10/my-guardian-mashup.html"/>
+          <updated>2009-03-10T00:00:00-07:00</updated>
+          <id>http://kalv.co.uk/2009/03/10/my-guardian-mashup</id>
+          <content type="html">&lt;p&gt;his morning I was invited to the &lt;a href=&quot;http://www.guardian.co.uk/&quot;&gt;Guardian&lt;/a&gt; at their new shiny office at Kings Cross for the launch of &lt;a href=&quot;http://www.guardian.co.uk/open-platform&quot;&gt;Open Platform API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;They have created an open API to access all, yes all of their content. It was said at the end that it is in beta and that they will be reviewing registrations for the API key. It&#39;s a great playground of information.&lt;/p&gt;
+
+&lt;p&gt;They provide methods to search by tags, retrieve items and articles. Even full text search terms too.&lt;/p&gt;
+
+&lt;p&gt;This allows developers to mashup applications vertically slicing up data in different ways. What I find brilliant is the tagging they have, you can filter by editorial tags such as /world/barack-obama, /global/reviews, etc. You can read more at their site. So if your trying to create nice content sites, different visualisations of data I do recommend you to look at their API.&lt;/p&gt;
+
+&lt;p&gt;I was asked to help with the creation of the &lt;a href=&quot;http://github.com/james/custodian&quot;&gt;Ruby library&lt;/a&gt; which is a simple start to make it easy for ruby developers to get up and running. With this library I created a mashup which probably took me a day to create.&lt;/p&gt;
+
+&lt;p&gt;Guardian Reviews - Is an application that queries Open Platform for the live music reviews, general reviews based on films and reviews. The data made available by the platform then allowed me to search twitter for relevant conversations that took place that are relevant. It is an example app not really a super duper production quality app :) (Update: site no longer up, sandbox taken down)&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;http://infovore.org/&quot;&gt;Tom Armitage&lt;/a&gt; for better designs than my bordered divs!&lt;/p&gt;
+</content>
+      </entry>
+    
+    
+</feed>

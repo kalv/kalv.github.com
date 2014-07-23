@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Playing with Macvim</title>
+  <meta name="author" content="Kalvir Sandhu">
+  <meta name="description" content="Kalv's weblog">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/webfonts/ss-social.css">
+  <link rel="stylesheet" href="/webfonts/ss-standard.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2959744-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="twelve columns">
+      <div id="article">
+  
+  <div class="header">
+    <span class="title"><a href="">Playing with Macvim</a></span></br>
+    <span class="date">29 Nov 2010</span>
+  </div>
+  <div id="content">
+    <p>I have been spending some time over the last week of so with macvim. Thought I'd share my experiences so far.</p>
+
+<h3>Why</h3>
+
+<p>I wanted to play around with VIM again really, one day a team member reminded me of the 'c-w' vim command when working on a server (it clears the word from the start of it). At this point I remembered the power that vim has and I wanted to get back to that and see if it would make it easier for me to edit and write code.</p>
+
+<p>I also felt a frustration when moving from keyboard to mouse. Could I be as productive and not have to touch the mouse (perhaps still use to explore around a project directories).</p>
+
+<p>Some people could argue these pains might not be enough to justify switching or spending the time to learn a new tool. I just thought I'd give it a try, I can always switch back to my long time home <a href="http://macromates.com/">textmate</a>.</p>
+
+<h3>Setting it up</h3>
+
+<p>I simply installed macvim through <a href="https://github.com/mxcl/homebrew">homebrew</a> <code>brew install macvim</code>. If you don't use homebrew to manage your packages on your mac, i seriously advise you to look into it.</p>
+
+<p>Once that was installed I installed the color <a href="http://blog.infinitered.com/entries/show/8">IR_Black_theme</a> to make it look a bit prettier than the default (I prefer dark backgrounds).</p>
+
+<p>I pulled parts of the <code>.vimrc</code> and <code>.gvimrc</code> from this <a href="https://github.com/railsjedi/vimconfig">repo from railsjedi</a> (found by just searching github for macvim).</p>
+
+<p>The main plugins I installed were:</p>
+
+<ul>
+<li><code>ack.vim</code>: Allows me to search the project using ack, similar to AckMate. To use it in vim I would <code>:Ack search_for_this</code>, i have now setup a mapping for my lead key and character (a shortcut really to the command)</li>
+<li><code>bufexplorer.vim</code>: This is a neat way to browse what files you have open in the buffer. I use this with a lead key shortcut too. Allowing quick switching files.</li>
+<li><code>rails.vim</code>: A rails plugin that really I find the syntax highlighting helpful, it does provide other things but i haven't used them much.</li>
+</ul>
+
+
+<p>A note on NERDTree, I started using this plugin which helps with directory navigating. But dropped it to use the included netrw in vim, it seems to do everything I need for now and thought it best to learn as much of the real tool as possible.</p>
+
+<p>So on to the findings.</p>
+
+<h3>:( Go to File / Peepopen</h3>
+
+<p>The first thing that became apparent was not having a <code>Go to File</code>, the Command-T option that would list the files in your directories and allow you to quickly go to a file.</p>
+
+<p>I have been using <a href="http://peepcode.com/products/peepopen">peepopen</a> in textmate for this and it works with macvim! You simply switch the editor and reload, works really easily.</p>
+
+<h3>:) Love split screen</h3>
+
+<p>Splitting the code on a 23" screen helps for both showing test with code and view with controllers/models. I think this is a preference thing, I myself like it. Even when just learning new code from a project having the ability to have multiple windows makes it easier.</p>
+
+<h3><em>:)</em> Shortcuts for text and visual mode</h3>
+
+<p>To remove and move text with commands on the keyboard is probably the most thing i've used. Having the ease to delete to the end of line and start writing, delete just the word or a couple and then having the visual mode helps too. Sure there is shift select in textmate for visual mode, but holding down the shift sometimes (not all) is annoying.</p>
+
+<h3>:( Running tests</h3>
+
+<p>When in a rails project using textmate I would always run a focussed test and window popup would open. With the vim setup I haven't found an easy way to do this. I have to switch to a terminal and run the test: <code>ruby -Itest test/blah -n '/the test to focus on/'</code>. This slows things down a little by only the fact that running a new focussed test means writing out the matcher, obviously repeating a test is quick, just means alt-tab, up and bang to run the command again.</p>
+
+<h3>:( No markdown preview</h3>
+
+<p>Recently I've found myself writing more markdown and liked the ability to preview the page in textmate. Haven't really looked if there is anything nice for vim on this.</p>
+
+<h3>:( Esc to complete</h3>
+
+<p>I barely used this in textmate, but have found myself wanting it now and then. It autocompleted the word you were writing when you pressed esc.</p>
+
+<h3>:/ To tab or not tab.</h3>
+
+<p>I'm finding it hard to decide on whether to open files in multiple tabs or to just switch between the buffers, this just get's messy that's all, i will eventually figure it out.</p>
+
+<h3>:) Even more fun to code</h3>
+
+<p>Learning something new with vim is fun and adds to the fun of doing the work I do. So for me this is a plus.</p>
+
+<h3>:) Remote developing.</h3>
+
+<p>I love the potential of using vim not just the macvim version on remote machines for pair development or even lightweight client's being able to develop by using a remove machine having components installed (ipad for example).</p>
+
+<h3>Conclusion</h3>
+
+<p>I'm going to continue using Macvim, as I'm loving what you can do to the text in visual mode and the ability to delete and move lines/words around on the keyboard.</p>
+
+<p>What do you think? Would you try or already use Macvim? Have any tipes?</p>
+
+  </div>
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</div>
+
+    </div>
+    <div class="four columns">
+      <nav>
+        <a href="/"><div id="profile-image"></div></a>
+        <p>
+          Hi I'm <a href="http://twitter.com/kalv">Kalv</a>, founder and CEO of <a
+            href="http://brewhouse.io">Brewhouse</a>. We make quality software products for startups and early stage companies.
+        </p>
+        <p>
+          Having trouble collecting and curating content for your newsletter?
+        </p>
+        <p>
+          Check out <a href="https://goodbits.io">Goodbits</a>.We make beautiful newsletters instantly with a chrome extension.
+        </p>
+        <p>
+          <span class="ss-icon ss-social-circle"><a href="http://twitter.com/kalv">&#xF611;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://www.linkedin.com/in/kalvir">&#xF612;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://github.com/kalv">&#xF671;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://www.flickr.com/photos/kalv">&#xF640;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://kalv.co.uk/index.xml">&#xE310;</a></span>
+        </p>
+      </nav>
+      &nbsp;
+    </div>
+  </div>
+  
+
+<script type="text/javascript">
+  var disqus_shortname = 'kalv';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://kalv.co.uk/2010/11/29/playing-with-macvim.html';
+  var disqus_url = 'http://kalv.co.uk/2010/11/29/playing-with-macvim.html';
+  var disqus_script = 'embed.js';
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Testing (TDD) in early Tech Startups?</title>
+  <meta name="author" content="Kalvir Sandhu">
+  <meta name="description" content="Kalv's weblog">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/webfonts/ss-social.css">
+  <link rel="stylesheet" href="/webfonts/ss-standard.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2959744-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="twelve columns">
+      <div id="article">
+  
+  <div class="header">
+    <span class="title"><a href="">Testing (TDD) in early Tech Startups?</a></span></br>
+    <span class="date">21 Jan 2010</span>
+  </div>
+  <div id="content">
+    <p>As a developer and working on early stage startups I always debate with founders on whether to follow Test Driven Development (TDD) or to just code the idea up and get it out, then later to write tests. I'm going to outline some things that I've found to be advantages and disadvantages.</p>
+
+<p>First I will say that I'm talking about very early stage tech startups, that haven't got a clear idea of how their product will work, revenue/funding or might fail fast due to realisation of one of the many factors, market not ready, target audience don't understand it and won't, low budget runway, etc.</p>
+
+<h2>Advantages of using TDD</h2>
+
+<h3>Changes are faster</h3>
+
+<p>When a developer wants to change something which you will in a startup, it will be easier with a fully tested application. You will also catch those annoying bugs in unforeseen area of the product when something is changed in another.</p>
+
+<h3>Less time to fix bugs</h3>
+
+<p>When trying to fix a bug the developer will be able to isolate the area of code quicker, refactor (change) the code, run tests until it's fixed quickly.</p>
+
+<h3>Quicker developer uptake</h3>
+
+<p>If you have to get another developer to work on the code having tests will make it far easier for them to understand what's what and make them feel confident to go in and develop because the tests will catch bad things that might happen.</p>
+
+<h3>Bugs are bad!</h3>
+
+<p>Having bugs appear to a limited startup user base isn't good. Seeing a bug might turn them away, thinking it's not solid enough, but they might still stick with you if the idea is great, would they be acceptable?</p>
+
+<h2>Disadvantages of using TDD</h2>
+
+<h3>Time</h3>
+
+<p>This is the most common talked about issue of fully testing projects. There is an amount of time used up making sure an application is tested. Testing frameworks to be incorporated into the codebase, mocks, test helpers for common actions in an application, this can be mostly at the beginning of the project but can take up essential time.</p>
+
+<h3>You might have a hero</h3>
+
+<p>The startup your creating might have a hero (rockstar) coder. One who can just get things out quickly and not bother with tests, therefore saving time to quickly change things and get user feedback. People wanting to make money love heros, for obvious reasons. But I personally think they are bad. If your project takes off and you need a team to carry it, it becomes difficult as that one hero becomes a bottleneck. Check Alex Payne's great article on Don't be a hero for more.</p>
+
+<h3>Money</h3>
+
+<p>Startups have limited time, I touched on this above. A quick line of code, hack, etc might be needed very quickly for an important pitch or press release, and if some tests don't pass but the front end of the application works fine, then it might be fine.</p>
+
+<h3>Bugs are acceptable?</h3>
+
+<p>I wrote that bugs are bad, but some issues might be acceptable to the founders of the startup. Ones were it might affect only 2% of the users or appear once in a while. Therefore it's ok to not test or have existing tests fail.</p>
+
+<h3>What do I do?</h3>
+
+<p>I take each project as they come but push to using testing on all projects. But some people find that this wastes time. So one strategy I've found work well is to test the complex areas of the application and importantly test what the user will see (the front end integration).</p>
+
+<p>Using integration frameworks like <a href="http://cukes.info/">Cucumber</a>, where it revolves around end user features is great. As it allows the parts of the application exposed to the users to be fully tested but for the detailed tests internally to be compromised.</p>
+
+<p>Did I miss something, what do you do?</p>
+
+  </div>
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</div>
+
+    </div>
+    <div class="four columns">
+      <nav>
+        <a href="/"><div id="profile-image"></div></a>
+        <p>
+          Hi I'm <a href="http://twitter.com/kalv">Kalv</a>, founder and CEO of <a
+            href="http://brewhouse.io">Brewhouse</a>. We make quality software products for startups and early stage companies.
+        </p>
+        <p>
+          Having trouble collecting and curating content for your newsletter?
+        </p>
+        <p>
+          Check out <a href="https://goodbits.io">Goodbits</a>.We make beautiful newsletters instantly with a chrome extension.
+        </p>
+        <p>
+          <span class="ss-icon ss-social-circle"><a href="http://twitter.com/kalv">&#xF611;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://www.linkedin.com/in/kalvir">&#xF612;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://github.com/kalv">&#xF671;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://www.flickr.com/photos/kalv">&#xF640;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://kalv.co.uk/index.xml">&#xE310;</a></span>
+        </p>
+      </nav>
+      &nbsp;
+    </div>
+  </div>
+  
+
+<script type="text/javascript">
+  var disqus_shortname = 'kalv';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://kalv.co.uk/2010/01/21/testing-tdd-in-early-tech-startups.html';
+  var disqus_url = 'http://kalv.co.uk/2010/01/21/testing-tdd-in-early-tech-startups.html';
+  var disqus_script = 'embed.js';
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+</body>
+</html>

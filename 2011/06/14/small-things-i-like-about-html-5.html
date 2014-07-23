@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Kalv</title>
+  <title>Small things I like about HTML 5</title>
   <meta name="author" content="Kalvir Sandhu">
   <meta name="description" content="Kalv's weblog">
 
@@ -40,101 +40,65 @@
 
   <div class="container">
     <div class="twelve columns">
-      <div id="home">
-  <ul class="articles">
-    
-      
-        <li>
-          <h3><a href="/2013/10/25/ember-dot-js-learning-resources.html">Ember.js learning resources and libraries</a></h3>
-          <span class="date">25 Oct 2013</span>
-        </li>
-      
-    
-      
-    
-      
-        <li>
-          <h3><a href="/2013/02/08/better-task-management-and-more-cloud-please.html">Better task management and more cloud please</a></h3>
-          <span class="date">08 Feb 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2013/02/01/forget-tender-get-satisfaction-is-an-email-address-enough.html">Forget Tender, Get satisfaction, is an email address enough?</a></h3>
-          <span class="date">01 Feb 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2013/01/28/my-2013-setup-of-hardware-and-software.html">My 2013 setup of hardware &amp; software</a></h3>
-          <span class="date">28 Jan 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2013/01/23/its-true-what-they-say-spend-more-time-doing-business-development.html">It's true what they say, spend more time doing Business Development</a></h3>
-          <span class="date">23 Jan 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2012/05/23/founding-a-startup-with-a-newborn-2-year-old-and-in-a-new-city.html">Founding a startup with a newborn, 2 year old and in a new city</a></h3>
-          <span class="date">23 May 2012</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2012/04/12/engaging-with-early-users-to-learn-habits.html">Engaging with early users to learn Habits</a></h3>
-          <span class="date">12 Apr 2012</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2012/01/17/how-a-ruby-guy-decided-to-add-nodejs-to-the-mix.html">How a Ruby guy decided to add node.js to the mix</a></h3>
-          <span class="date">17 Jan 2012</span>
-        </li>
-      
-    
-  </ul>
-
-  <div class="pagination">
-
-    <ul class="pages">
-      
-
-      <li class="page">
-        
-        <span class="current-page">1</span>
-        
-      </li>
-
-      
-        <li class="page">
-          
-          <a href="/page2">2</a>
-          
-        </li>
-      
-        <li class="page">
-          
-          <a href="/page3">3</a>
-          
-        </li>
-      
-
-      
-        <li class="next">
-          <a href="/page2">&gt;&gt;</a>
-        </li>
-      
-    </ul>
+      <div id="article">
+  
+  <div class="header">
+    <span class="title"><a href="">Small things I like about HTML 5</a></span></br>
+    <span class="date">14 Jun 2011</span>
   </div>
+  <div id="content">
+    <p>Most people are talking about the big things that HTML 5 is bringing to the table, video, audio, Websockets APIs, etc. I thought I'd share a small selection of the small attributes that I've used so far.</p>
+
+<h3>the placeholder attribute</h3>
+
+<p>You can now add the placeholder attribute on form input elements. This will then display the text until the user provides focus to the input element.</p>
+
+<pre><code>&lt;input type="text" placeholder="Enter your email address"/&gt;
+</code></pre>
+
+<p>Wow this has made things so much easier. No more extra javascript to remove the value when clicked and then put it back when the user clicks away and it's empty, blah di blah.</p>
+
+<h3>email input type</h3>
+
+<p>To better improve what I wrote above, you can now define an email type on input elements. Allowing mobile browsers to show a different keyboard for those elements.</p>
+
+<pre><code>&lt;input type="email" placeholder="Enter your email address"/&gt;
+</code></pre>
+
+<p>There are more wonderful attributes to provide browsers with better information on what needs to be entered like 'min' and 'step' for 'number' type input elements. All good stuff, it's great to see browsers implementing more behaviour on the structure of webpages.</p>
+
+<h3>the cache manifest</h3>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html manifest="/cache.manifest"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test&lt;/title&gt;
+    &lt;script src="application.js"&gt;&lt;/script&gt;
+    ...
+</code></pre>
+
+<p>Offline web pages made simple. Simply add the manifest attribute to html pointing to a web served file. This will setup which files will be available offline. So for this example a file 'cache.manifest' would be created.</p>
+
+<pre><code>CACHE MANIFEST 
+/application.js
+</code></pre>
+
+<p>You can even define what is required for network access or even just point to an offline page. Nice.</p>
+
+<pre><code>CACHE MANIFEST
+FALLBACK:
+/ /offline.html
+NETWORK:
+*
+</code></pre>
+
+<p>This file has to be served as type 'text/cache-manifest'. Read more on cache manifest at  <a href="http://diveintohtml5.org/offline.html">diveintohtml5.org</a>. If you use Ruby checkout <a href="https://github.com/wycats/rack-offline">Rack::Offline</a> to help manage your offline files.</p>
+
+  </div>
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
 </div>
 
     </div>
@@ -167,8 +131,8 @@
 <script type="text/javascript">
   var disqus_shortname = 'kalv';
   // var disqus_developer = 1;
-  var disqus_identifier = 'http://kalv.co.uk/index.html';
-  var disqus_url = 'http://kalv.co.uk/index.html';
+  var disqus_identifier = 'http://kalv.co.uk/2011/06/14/small-things-i-like-about-html-5.html';
+  var disqus_url = 'http://kalv.co.uk/2011/06/14/small-things-i-like-about-html-5.html';
   var disqus_script = 'embed.js';
   (function () {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

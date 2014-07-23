@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Kalv</title>
+  <title>Stop being clever Capybara</title>
   <meta name="author" content="Kalvir Sandhu">
   <meta name="description" content="Kalv's weblog">
 
@@ -40,101 +40,47 @@
 
   <div class="container">
     <div class="twelve columns">
-      <div id="home">
-  <ul class="articles">
-    
-      
-        <li>
-          <h3><a href="/2013/10/25/ember-dot-js-learning-resources.html">Ember.js learning resources and libraries</a></h3>
-          <span class="date">25 Oct 2013</span>
-        </li>
-      
-    
-      
-    
-      
-        <li>
-          <h3><a href="/2013/02/08/better-task-management-and-more-cloud-please.html">Better task management and more cloud please</a></h3>
-          <span class="date">08 Feb 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2013/02/01/forget-tender-get-satisfaction-is-an-email-address-enough.html">Forget Tender, Get satisfaction, is an email address enough?</a></h3>
-          <span class="date">01 Feb 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2013/01/28/my-2013-setup-of-hardware-and-software.html">My 2013 setup of hardware &amp; software</a></h3>
-          <span class="date">28 Jan 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2013/01/23/its-true-what-they-say-spend-more-time-doing-business-development.html">It's true what they say, spend more time doing Business Development</a></h3>
-          <span class="date">23 Jan 2013</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2012/05/23/founding-a-startup-with-a-newborn-2-year-old-and-in-a-new-city.html">Founding a startup with a newborn, 2 year old and in a new city</a></h3>
-          <span class="date">23 May 2012</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2012/04/12/engaging-with-early-users-to-learn-habits.html">Engaging with early users to learn Habits</a></h3>
-          <span class="date">12 Apr 2012</span>
-        </li>
-      
-    
-      
-        <li>
-          <h3><a href="/2012/01/17/how-a-ruby-guy-decided-to-add-nodejs-to-the-mix.html">How a Ruby guy decided to add node.js to the mix</a></h3>
-          <span class="date">17 Jan 2012</span>
-        </li>
-      
-    
-  </ul>
-
-  <div class="pagination">
-
-    <ul class="pages">
-      
-
-      <li class="page">
-        
-        <span class="current-page">1</span>
-        
-      </li>
-
-      
-        <li class="page">
-          
-          <a href="/page2">2</a>
-          
-        </li>
-      
-        <li class="page">
-          
-          <a href="/page3">3</a>
-          
-        </li>
-      
-
-      
-        <li class="next">
-          <a href="/page2">&gt;&gt;</a>
-        </li>
-      
-    </ul>
+      <div id="article">
+  
+  <div class="header">
+    <span class="title"><a href="">Stop being clever Capybara</a></span></br>
+    <span class="date">27 Oct 2010</span>
   </div>
+  <div id="content">
+    <p>Today we realised that there was a bunch of functionality being tested that didn't work when javascript was disabled and had to spend a while figuring it out.</p>
+
+<p>We found that it was because of the Rails 3 ability to make links become either HTTP DELETE or POST requests. So when creating a link in rails like this:</p>
+
+<pre><code>link_to "Delete blog post", blog_post(@blog), :method =&gt; :delete
+</code></pre>
+
+<p>It would output into a html link:</p>
+
+<pre><code>&lt;a href="/blog/1" data-method="delete"&gt;Delete blog post&lt;/a&gt;
+</code></pre>
+
+<p>The <code>data-method</code> is a <a href="http://ejohn.org/blog/html-5-data-attributes/">HTML5 custom attribute</a> by the looks of things. When the page is loaded the default <code>rails.js</code> javascript adds an event handler to those link elements to turn it into a form that will actually send a DELETE http request when it is clicked.</p>
+
+<p>When testing these links in <a href="http://github.com/jnicklas/capybara">Capybara</a> (an integration testing framework) for some reason it performs this javascript behaviour within it's <a href="http://github.com/jnicklas/capybara/commit/58d4d0ca">rack-test driver</a>. <strong>Isn't this wrong?</strong> Shouldn't integration testing be just clicking through the site when javascript is disabled. And when you want to test javascript you use a javascript driver explicitly, like you can in cucumber and capybara:</p>
+
+<pre><code>@javascript
+    Scenario: do something AJAXy
+      When I click the AJAX link
+      ...
+</code></pre>
+
+<p>This magic that capybara performs would lead a developer into believing that those links work without javascript but they don't. Sure some people might say why worry about it, most browsers now know about javascript, but what happens if someone chooses to turn it off or it's disabled for other reasons.</p>
+
+<p>Moving forward I'm going to try and steer clear from using the ':method => :delete' in rails or monkey patch capybara to stop it changing the test request based on the 'data-method'.</p>
+
+<script src="http://gist.github.com/649000.js?file=capybara_monkey_patch.rb"></script>
+
+
+  </div>
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
 </div>
 
     </div>
@@ -167,8 +113,8 @@
 <script type="text/javascript">
   var disqus_shortname = 'kalv';
   // var disqus_developer = 1;
-  var disqus_identifier = 'http://kalv.co.uk/index.html';
-  var disqus_url = 'http://kalv.co.uk/index.html';
+  var disqus_identifier = 'http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html';
+  var disqus_url = 'http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html';
   var disqus_script = 'embed.js';
   (function () {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

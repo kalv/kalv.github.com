@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>How a Ruby guy decided to add node.js to the mix</title>
+  <meta name="author" content="Kalvir Sandhu">
+  <meta name="description" content="Kalv's weblog">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/webfonts/ss-social.css">
+  <link rel="stylesheet" href="/webfonts/ss-standard.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2959744-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="twelve columns">
+      <div id="article">
+  
+  <div class="header">
+    <span class="title"><a href="">How a Ruby guy decided to add node.js to the mix</a></span></br>
+    <span class="date">17 Jan 2012</span>
+  </div>
+  <div id="content">
+    <p>I've been a Ruby guy for over 4 years now and have always found the language fun and the frameworks suitable for building web based applications, I love it.</p>
+
+<p>Since the release of <a href="http://nodejs.org">Node.js</a> in 2009, I and my colleagues at
+<a href="http://www.gofreerange.com">GoFreeRange</a> were very excited about the
+event loop, non-blocking IO goodness for scalability and speed on the
+web. We had even played on something to help
+<a href="https://github.com/freerange/nodetest">testing</a> (was only for a day, just to learn more about the tech).</p>
+
+<p>So I've been looking for the right time to start developing a real
+application that benefits from what Node.js has to offer over what I can
+do quickly and efficiently in Ruby.</p>
+
+<p>I have yet to see an API or website
+really need the scalability or speed offered by node.js over what I know
+with ruby, so I've always chosen to use what I know, has good
+conventions and good maintainability.</p>
+
+<p>But last week the time finally arrived where Node.js might be a better
+fit.</p>
+
+<p>This won't be a post outlining benchmark metrics but just an overview of
+my findings and how I settled on Node.js for this specific need.</p>
+
+<h2>The problem</h2>
+
+<p>Our feed checking mechanism at <a href="http://rsshero.com">RSS Hero</a> was built
+using <a href="https://github.com/defunkt/resque">Resque</a> so that we could fetch
+multiple feeds and check them (making sure they are a feed). Then to
+subscribe with <a href="http://superfeedr.com">Superfeedr</a> if successful.</p>
+
+<p>This process was not fast enough for fetching lots of feeds, I found
+that activating a couple of users that each had 1000 subscriptions or so,
+it would stack up and take quite a while to churn through.</p>
+
+<p>Even though I could increase the number of resque workers running in parallel I would end up using more memory on our limited production servers.</p>
+
+<p>HTTP feed fetching is going to increase, one of our upcoming milestones
+is to take load away from superfeedr and fetch some feeds ourselves.</p>
+
+<h2>Proposed Solutions</h2>
+
+<p>To make this faster I needed to use less memory and be able to fetch
+multiple HTTP requests in parallel.  The shortlist that I came up with was:</p>
+
+<ul>
+<li><a href="http://rubyeventmachine.com/">Eventmachine</a> &amp;
+<a href="https://github.com/igrigorik/em-http-request">em-http-request</a> - A ruby event loop allowing async processing</li>
+<li><a href="https://github.com/dbalatero/typhoeus">Typhoeus</a> - Http fetching using curb (curl)</li>
+<li><a href="http://nodejs.org">Node.js</a> - event driven, non-blocking IO</li>
+</ul>
+
+
+<p>So to figure out which was best I set a time box of 1/2 day to spike on each method and learn about them.</p>
+
+<p>With each test setup I used <a href="http://redis.io/topics/pubsub">Redis
+pubsub</a> to push urls to be fetched onto a channel and have the fetching code consume that channel.  This would allow easy integration from the existing rails app.</p>
+
+<p>Also to remove bandwidth fluctuations from my ISP I ran the tests on a
+<a href="http://www.linode.com/">Linode</a> server.</p>
+
+<h2>Eventmachine</h2>
+
+<p>This was my first choice and I believed it would be good enough for our
+needs.  I would be able to use my existing tested ruby code for the feed
+checking and connect it to redis.</p>
+
+<p>The first issue and main one was eventmachine kept on stalling.  When
+the sample data was loaded, the compatible redis library
+(<a href="https://github.com/mloughran/em-hiredis">em-hiredis</a>) would read off
+all the messages off the pubsub channel and kick off http requests,
+responses then stopped after the first 100 requests.</p>
+
+<p>I thought it might be an issue with trying to send too many requests at
+one time. So I tried using <a href="https://github.com/igrigorik/em-synchrony">em-synchrony</a> which is a lovely library to allow synchronous control in the event loop, but it stopped the async nature of the http requesting so slowed it back down.</p>
+
+<p>To better manage the concurrency I then tried to store the received urls from redis into a shared
+variable and then poll that collection (EM::PeriodicTimer) and only fire
+off a limited amount of http requests. This worked well until 300-400
+requests were sent, again eventmachine stalled for a 1-5 secs and then
+came back again.</p>
+
+<p>After spending a bit of time debugging and digging into my limited
+knowledge of Eventmachine and em-http I couldn't see what was happening. All I could
+see was that the event loop was not 'ticking', the timer was not firing
+so maybe something had blocked the IO loop. Using 1000 requests to a
+localhost web address worked fine, so maybe it was something in the
+network layer, maybe an address not returning, DNS hanging. I did find
+evidence to show that the HTTP Connection was <a href="https://github.com/igrigorik/em-http-request/blob/master/lib/em-http/http_connection.rb#L75">not fully
+asynchronous</a> so
+perhaps one or a couple of network connections were blocking.</p>
+
+<p>I fiddled with adding timeout settings to the http request but nothing
+stopped hitting this stall.</p>
+
+<p>With my limited time for this spike and this stability issue I moved on.</p>
+
+<h2>Typhoeus</h2>
+
+<p>I have used curb before for fast feed fetching at
+<a href="http://twitterfeed.com">Twitterfeed</a>, where I used a modified
+<a href="https://github.com/kalv/feedzirra">feedzirra</a> that allowed multiple http feed fetching, this worked very well at the time.</p>
+
+<p>Comparing this though to the speed I was getting with Eventmachine it
+was slow, a fire off of 10 http requests would still wait for them all
+to return, which was too slow.</p>
+
+<p>Again I had to manage my own concurrency when reading urls to be fetched
+from redis.</p>
+
+<p>This being too slow, I moved on to node.js.</p>
+
+<h2>Node.js</h2>
+
+<p>Already knowing javascript, I got it running pretty quickly and the
+responses came through fast. I can't say exactly but it responses for
+for the first hundre came through a lot quicker and it stayed
+consistently fast.</p>
+
+<p>I didn't have to worry about concurrency control, internally node.js
+seemed to manage and handle the requests fine.</p>
+
+<p>I had to write my own code to handle redirects and to put a cap on how
+many to follow before throwing an exception as I was using the http
+request library included in Node.js.</p>
+
+<p>The results from the little testing on Node.js was amazing. It felt
+solid and fast. This was enough for me to take the plunge and deploy
+some node.js.</p>
+
+<h2>To Summarize</h2>
+
+<p>I chose to use node.js because it was faster, stable and used a lower
+memory footprint on my server.</p>
+
+<p><a href="http://rsshero.com">RSS Hero</a> is now using node.js for it's http
+fetching and memory usage has reduced from 400mb of RAM to 20mb and it's a lot faster.</p>
+
+  </div>
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</div>
+
+    </div>
+    <div class="four columns">
+      <nav>
+        <a href="/"><div id="profile-image"></div></a>
+        <p>
+          Hi I'm <a href="http://twitter.com/kalv">Kalv</a>, founder and CEO of <a
+            href="http://brewhouse.io">Brewhouse</a>. We make quality software products for startups and early stage companies.
+        </p>
+        <p>
+          Having trouble collecting and curating content for your newsletter?
+        </p>
+        <p>
+          Check out <a href="https://goodbits.io">Goodbits</a>.We make beautiful newsletters instantly with a chrome extension.
+        </p>
+        <p>
+          <span class="ss-icon ss-social-circle"><a href="http://twitter.com/kalv">&#xF611;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://www.linkedin.com/in/kalvir">&#xF612;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://github.com/kalv">&#xF671;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://www.flickr.com/photos/kalv">&#xF640;</a></span>
+          <span class="ss-icon ss-social-circle"><a href="http://kalv.co.uk/index.xml">&#xE310;</a></span>
+        </p>
+      </nav>
+      &nbsp;
+    </div>
+  </div>
+  
+
+<script type="text/javascript">
+  var disqus_shortname = 'kalv';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://kalv.co.uk/2012/01/17/how-a-ruby-guy-decided-to-add-nodejs-to-the-mix.html';
+  var disqus_url = 'http://kalv.co.uk/2012/01/17/how-a-ruby-guy-decided-to-add-nodejs-to-the-mix.html';
+  var disqus_script = 'embed.js';
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+</body>
+</html>
