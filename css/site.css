@@ -1,6 +1,7 @@
 /* Generic overrides */
 body {
   font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 a {
   color:#00a;
@@ -24,34 +25,14 @@ h1, h2, h3, #home .articles li a, #article .title a {
 
 nav {
   width:220px;
-  font-size:13px;
+  font-size:14px;
 }
 nav p {
   margin-bottom:25px;
 }
 
-/* tablet portrait */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  nav {
-    position:relative;
-    width:auto;
-  }
-}
-
-/* mobile (Portrait)*/
-@media only screen and (max-width: 767px) {
-  nav {
-    position:relative;
-    width:auto;
-  }
-}
-
-/* Mobile landscape */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  nav {
-    position:relative;
-    width:auto;
-  }
+#home .articles li {
+  margin-bottom: 30px;
 }
 
 #home .articles li a:hover {
@@ -108,10 +89,6 @@ h3 {
   background: url("/images/kalv-100.png") no-repeat;
 }
 
-#home .articles li {
-  margin-bottom: 20px;
-}
-
 #home .articles span.date {
   color:#555;
 }
@@ -134,7 +111,7 @@ h3 {
   margin-top:10px;
 }
 #article #content p, #article #content, #article #content li {
-  color:#333;
+  color:#111;
   font-size:16px;
   line-height:1.8em;
 }
@@ -165,4 +142,37 @@ hr {
   background-color: #eee;
   padding:5px;
   margin-bottom:10px;
+}
+
+/* tablet portrait */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  nav {
+    position:relative;
+    width:auto;
+  }
+}
+
+/* mobile (Portrait)*/
+@media only screen and (max-width: 767px) {
+  nav {
+    position:relative;
+    width:auto;
+  }
+  .container {
+    padding-top: 10px;
+  }
+  #article #content p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  nav {
+    position:relative;
+    width:auto;
+  }
+  .container {
+    padding-top: 10px;
+  }
 }
