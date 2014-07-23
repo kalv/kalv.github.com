@@ -103,6 +103,10 @@ h3 {
   margin-bottom:40px;
 }
 
+#article .social-actions {
+  margin-top:5px;
+}
+
 #article .date {
   color: #555;
 }

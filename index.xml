@@ -3,13 +3,40 @@
     <title>Kalvir Sandhu</title>
     <link href="http://kalv.co.uk/index.xml" rel="self"/>
     <link href="http://kalv.co.uk/"/>
-    <updated>2014-07-23T12:20:01-07:00</updated>
+    <updated>2014-07-23T12:32:35-07:00</updated>
     <id>http://kalv.co.uk</id>
     <author>
         <name>Kalvir Sandhu</name>
         <email>kalv@kalv.co.uk</email>
     </author>
     
+    
+      <entry>
+          <title>Sorry PressFarm, open data should be free</title>
+          <link href="http://kalv.co.uk/2014/07/23/sorry-pressfarm-open-data-should-be-free.html"/>
+          <updated>2014-07-23T11:48:00-07:00</updated>
+          <id>http://kalv.co.uk/2014/07/23/sorry-pressfarm-open-data-should-be-free</id>
+          <content type="html">&lt;p&gt;I was driving home last night from the &quot;&lt;a href=&quot;https://www.picatic.com/YVRtechanchor&quot;&gt;building Vancouver&#39;s next tech anchor&lt;/a&gt;&quot; event so I switched on the &lt;a href=&quot;https://itunes.apple.com/us/podcast/product-hunt/id862714883?mt=2&quot;&gt;ProductHunt podcast&lt;/a&gt; for some background product goodness. That jingle is just... wow.&lt;/p&gt;
+
+&lt;p&gt;They started to talk about &lt;a href=&quot;https://press.farm&quot;&gt;PressFarm&lt;/a&gt;, the site that gives journalists email addresses for free; well actually you have to pay for it! You sign up &quot;Free&quot; from the homepage and then you get presented with a message to pay to view the email addresses. Susan, Sarah, Kyle, from Techcrunch all talked about how charging for this is not cool, I agreed completely.&lt;/p&gt;
+
+&lt;p&gt;So I opened my laptop when I got home, created a folder &#39;openpressfarm&#39; and developed a quick chrome extension that injects the publicly available email addresses for the journalists&#39; twitter profiles for &quot;Free&quot;!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2014/openpressfarm.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So go ahead and &lt;a href=&quot;https://chrome.google.com/webstore/detail/openpressfarm/chdolnciiacdalbicnjjdmphnpangejl&quot;&gt;install it&lt;/a&gt;, if you have chrome and &lt;a href=&quot;http://techcrunch.com/2014/07/14/please-dont-spam-us/&quot;&gt;save more money for ice cream&lt;/a&gt;. It&#39;s a very quick hack (less than 1 hour), so it doesn&#39;t update when PressFarm does or if a journalist updates their twitter bio.&lt;/p&gt;
+
+&lt;p&gt;I feel that if journalists publicize their email it should be visible. And those that want to reach out to them should try to learn what they write about and why so it&#39;s not just spam.&lt;/p&gt;
+
+&lt;p&gt;I just saw that &lt;a href=&quot;https://flippa.com/3119880-press-farm-revenue-700-week-featured-in-techcrunch-pando-hacker-news&quot;&gt;Press Farm is for sale&lt;/a&gt;; good on them. Man, I&#39;m doing something wrong with &lt;a href=&quot;https://goodbits.io&quot;&gt;my startup&lt;/a&gt; :)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Warning&lt;/em&gt;: It&#39;s not a good idea to spam journalists, so please don&#39;t. A small cat somewhere might get harmed.&lt;/li&gt;
+&lt;li&gt;If you are a journalist and don&#39;t want your email in this hack, let me know and I can easily remove it.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+      </entry>
     
     
     
