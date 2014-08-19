@@ -24,11 +24,19 @@ h1, h2, h3, #home .articles li a, #article .title a {
 }
 
 nav {
+  text-align: center;
   width:220px;
-  font-size:14px;
+  font-size:13px;
+  color: #555;
 }
 nav p {
   margin-bottom:25px;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 
 #home .articles li {
@@ -42,10 +50,6 @@ nav p {
 #home .articles li a {
   font-size:22px;
   line-height: 24px;
-}
-#article .title {
-  font-size:26px;
-  line-height:1.2em;
 }
 
 h1 {
@@ -86,7 +90,7 @@ h3 {
   border-radius:50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
-  background: url("/images/kalv-100.png") no-repeat;
+  background: url("/images/kalv-100.jpg") no-repeat;
 }
 
 #home .articles span.date {
@@ -96,6 +100,15 @@ h3 {
 #home .pagination li {
   display:inline;
   margin-right:5px;
+}
+
+#article {
+  padding-right: 30px;
+}p
+
+#article .title {
+  font-size:26px;
+  line-height:1.2em;
 }
 
 #article .header {

@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Stop being clever Capybara</title>
+  <title>Empty your sock drawer and sort it</title>
   <meta name="author" content="Kalvir Sandhu">
   <meta name="description" content="Kalv's weblog">
 
@@ -42,50 +42,38 @@
     <div class="twelve columns">
       <div id="article">
   
+    <div class="draft">
+      DRAFT - not published
+    </div>
+  
   <div class="header">
-    <span class="title"><a href="">Stop being clever Capybara</a></span></br>
-    <span class="date">27 Oct 2010</span>
+    <span class="title"><a href="">Empty your sock drawer and sort it</a></span></br>
+    <span class="date">18 Aug 2014</span>
 
     <div class="social-actions">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html">Tweet</a>
-      <!-- <div class="fb-share-button" data-href="http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html" data-type="button_count"></div> -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://kalv.co.uk/2014/08/18/empty-your-sock-drawer-and-sort-it.html">Tweet</a>
+      <!-- <div class="fb-share-button" data-href="http://kalv.co.uk/2014/08/18/empty-your-sock-drawer-and-sort-it.html" data-type="button_count"></div> -->
     </div>
 
   </div>
   <div id="content">
-    <p>Today we realised that there was a bunch of functionality being tested that didn't work when javascript was disabled and had to spend a while figuring it out.</p>
+    <p>Management can sometimes feel you’re running around doing nothing at all. Especially when you're building a startup, things get slower and slower (for good reasons like quality and size I hope).</p>
 
-<p>We found that it was because of the Rails 3 ability to make links become either HTTP DELETE or POST requests. So when creating a link in rails like this:</p>
+<p>There are days I feel like nothing ever gets done, lots of meetings, discussions, emails, people to assist, squeeze in lunch; by the end of of the day you feel beaten.</p>
 
-<pre><code>link_to "Delete blog post", blog_post(@blog), :method =&gt; :delete
-</code></pre>
+<p>Early in my career a very senior director told me a solution during training that you have to just “empty the sock drawer and sort it”. He went on to explain that some days he’d go home, empty the sock drawer, take each sock, match it with it’s pair and place them back neatly. Once complete he’d feel much better with the day. He had accomplished something.</p>
 
-<p>It would output into a html link:</p>
+<p>I can remember thinking this director is nuts. How is that going to ever help, they should’ve sent me to a proper training course.</p>
 
-<pre><code>&lt;a href="/blog/1" data-method="delete"&gt;Delete blog post&lt;/a&gt;
-</code></pre>
+<p>I now know what he meant.</p>
 
-<p>The <code>data-method</code> is a <a href="http://ejohn.org/blog/html-5-data-attributes/">HTML5 custom attribute</a> by the looks of things. When the page is loaded the default <code>rails.js</code> javascript adds an event handler to those link elements to turn it into a form that will actually send a DELETE http request when it is clicked.</p>
+<p>It’s important to have completed something at the end of the day. This feeling of accomplishment is very satisfying. This is one of the reasons I’m always encouraging developers to write small deliverable user stories (tasks) so that they can tick a box at the end of the day, feel good at completing something.</p>
 
-<p>When testing these links in <a href="http://github.com/jnicklas/capybara">Capybara</a> (an integration testing framework) for some reason it performs this javascript behaviour within it's <a href="http://github.com/jnicklas/capybara/commit/58d4d0ca">rack-test driver</a>. <strong>Isn't this wrong?</strong> Shouldn't integration testing be just clicking through the site when javascript is disabled. And when you want to test javascript you use a javascript driver explicitly, like you can in cucumber and capybara:</p>
+<p>For me I’ve started making a list of wins like this, like writing a blog post, cleaning the dishes, making something with my kids (science projects FTW!) and I'm looking for more.</p>
 
-<pre><code>@javascript
-    Scenario: do something AJAXy
-      When I click the AJAX link
-      ...
-</code></pre>
-
-<p>This magic that capybara performs would lead a developer into believing that those links work without javascript but they don't. Sure some people might say why worry about it, most browsers now know about javascript, but what happens if someone chooses to turn it off or it's disabled for other reasons.</p>
-
-<p>Moving forward I'm going to try and steer clear from using the ':method => :delete' in rails or monkey patch capybara to stop it changing the test request based on the 'data-method'.</p>
-
-<script src="http://gist.github.com/649000.js?file=capybara_monkey_patch.rb"></script>
-
+<p>How about you, what is your sock drawer?</p>
 
   </div>
-  
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
   
 </div>
 
@@ -118,8 +106,8 @@
 <script type="text/javascript">
   var disqus_shortname = 'kalv';
   // var disqus_developer = 1;
-  var disqus_identifier = 'http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html';
-  var disqus_url = 'http://kalv.co.uk/2010/10/27/stop-being-clever-capybara.html';
+  var disqus_identifier = 'http://kalv.co.uk/2014/08/18/empty-your-sock-drawer-and-sort-it.html';
+  var disqus_url = 'http://kalv.co.uk/2014/08/18/empty-your-sock-drawer-and-sort-it.html';
   var disqus_script = 'embed.js';
   (function () {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
