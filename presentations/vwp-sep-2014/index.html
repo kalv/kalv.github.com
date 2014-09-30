@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>High Performance MySQL tuning</title>
+    <meta charset='utf-8'>
+    <meta content='width=1024, user-scalable=no' name='viewport'>
+    <!-- deck.js's core css -->
+    <link href="deck.js/core/deck.core.css" rel="stylesheet" type="text/css"/>
+    <!-- deck.js extension CSS files -->
+    <link href="deck.js/extensions/codemirror/deck.codemirror.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/goto/deck.goto.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/hash/deck.hash.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/menu/deck.menu.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/navigation/deck.navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/scale/deck.scale.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/status/deck.status.css" rel="stylesheet" type="text/css"/>
+    <!-- all css in the css dir: Keydown CSS, your custom CSS, and themes from deck.js -->
+    <link href="css/keydown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/dealing-with-clients.css" rel="stylesheet" type="text/css"/>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/horizontal-slide.css" rel="stylesheet" type="text/css"/>
+    <link href="css/swiss.css" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr (provided for legacy browsers) -->
+    <script src="deck.js/support/modernizr.custom.js" type="text/javascript"></script>
+  </head>
+  <body class='deck-container keydown'>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>MySQL tuning tips</h1>
+        
+        <h2>kalv@brewhouse.io</h2>
+        
+        <h3>#VWP Sep 2014</h3>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Oh no the database is slow, how did that happen?</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>This book is the book to get</h1>
+        
+        <p>High Performance MySQL, 3rd Edition
+        <img src="images/high-perf-book.jpg" alt="" /></p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>But let me give some tips</h1>
+        
+        <p>(Focused on query optimizing)</p>
+        
+        <p>(Things that I see a lot)</p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>What is slow?</h1>
+        
+        <ul>
+        <li>What are you trying to optimize and why</li>
+        <li>NewRelic / Skylight.io</li>
+        <li>MySQL Slow log</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>MySQL slow log</h1>
+        
+        <ul>
+        <li>Default is 10 secs</li>
+        <li>Look for high occuring slow queries</li>
+        <li>Don't start at 2 and work down if too much</li>
+        </ul>
+        
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> SET GLOBAL long_query_time = 2;</textarea>
+    </p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Percona</h1>
+        
+        <ul>
+        <li>Percona is a build of MySQL</li>
+        <li>When using Percona you get this wonderful gem</li>
+        </ul>
+        
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> SET GLOBAL log_slow_verbosity='full';</textarea>
+    </p>
+        
+        <p><textarea class='code' display='none' mode='&#x000A;# User@Host: mailboxer[mailboxer] @  [192.168.10.165]'># Thread_id: 11167745  Schema: board&#x000A;# Query_time: 1.009400  Lock_time: 0.000190  Rows_sent: 4 &#x000A;  Rows_examined: 1543719  Rows_affected: 0  Rows_read: 4&#x000A;# Bytes_sent: 278  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0&#x000A;# InnoDB_trx_id: 1500&#x000A;# QC_Hit: No  Full_scan: Yes  Full_join: No  Tmp_table: No  Tmp_table_on_disk: No&#x000A;# Filesort: No  Filesort_on_disk: No  Merge_passes: 0&#x000A;#   InnoDB_IO_r_ops: 6415  InnoDB_IO_r_bytes: 105103360  InnoDB_IO_r_wait: 0.001279&#x000A;#   InnoDB_rec_lock_wait: 0.000000  InnoDB_queue_wait: 0.000000&#x000A;#   InnoDB_pages_distinct: 6430&#x000A;SET timestamp=1346844943;&#x000A;SELECT id,title,production_year FROM title WHERE title = 'Bambi';</textarea>
+    </p>
+        
+        <ul>
+        <li>Are you seeing <code>Tmp_table_on_disk: Yes</code>?</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>EXPLAIN</h1>
+        
+        <ul>
+        <li>Learn what tables are read</li>
+        <li>What type of read operations</li>
+        <li>Which indexes are being used (if any!)</li>
+        <li>Optimize rows scanned</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>So what am I looking for?</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Example: table scan</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> EXPLAIN SELECT id, title FROM title WHERE title = 'Star Trek'&#x000A;  ORDER BY production_year\G&#x000A;*************************** 1. row ***************************&#x000A;           id: 1&#x000A;  select_type: SIMPLE&#x000A;        table: title&#x000A;         type: ALL&#x000A;possible_keys: NULL&#x000A;          key: NULL&#x000A;      key_len: NULL&#x000A;          ref: NULL&#x000A;         rows: 190102&#x000A;        Extra: Using where; Using filesort;&#x000A;1 row in set (0.00 sec)</textarea>
+    </p>
+        
+        <ul>
+        <li><code>type: ALL</code> is a table scan!</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Example: Add Index</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> ALTER TABLE title ADD INDEX (title)</textarea>
+    </p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Example: Run again</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> EXPLAIN SELECT id, title FROM title WHERE title = 'Star Trek'&#x000A;  ORDER BY production_year\G&#x000A;*************************** 1. row ***************************&#x000A;           id: 1&#x000A;  select_type: SIMPLE&#x000A;        table: title&#x000A;         type: ref&#x000A;possible_keys: title&#x000A;          key: title&#x000A;      key_len: 152&#x000A;          ref: const&#x000A;         rows: 4&#x000A;        Extra: Using where; Using filesort;&#x000A;1 row in set (0.00 sec)</textarea>
+    </p>
+        
+        <ul>
+        <li><code>type: ref</code> Yay! Uses a <code>=</code> for comparison</li>
+        <li>Far less rows to be compared</li>
+        <li>Read for more information on <code>type: range</code> and others.</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Composite indexes</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>SELECT * from title WHERE title = 'Star Trek'&#x000A;  AND production_year BETWEEN 2006 AND 2009</textarea>
+    </p>
+        
+        <ul>
+        <li><p>MySQL query optimizer, magic.</p></li>
+        <li><p>Table 'title' has index for title, production_year</p>
+        
+        <ul>
+        <li>Index on [production_year, title], still the title index will be chosen.</li>
+        <li>Index on [title, production_year], composite index will be chosen.</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Covering Index</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>SELECT * FROM name.*&#x000A;INNER JOIN cast_info ON name.id = cast_info.person_id&#x000A;INNER JOIN char_name ON cast_info.person_role_id = char_name.id&#x000A;WHERE char_name.name = 'James Bond'\G&#x000A;&#x000A;ALTER TABLE cast_info ADD INDEX&#x000A;  person_role_id_person_id (person_role_id, person_id);</textarea>
+    </p>
+        
+        <ul>
+        <li>Order of table names in a query is the order MySQL decides use of joins</li>
+        <li>If join table is further joined, then one index should have both foreign keys</li>
+        <li>Join on <code>cast_info</code> now will be using index only, no join buffer when explained.</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Query profiling</h1>
+        
+        <p>5.0 (limited), really 5.1 and up</p>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> set profiling = 1;&#x000A;... run query</textarea>
+    </p>
+        
+        <ul>
+        <li>Don't use in production</li>
+        <li>Use only in development sessions</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Query profiling</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> show profiles\G&#x000A;&#x000A;*************************** 1. row ********&#x000A;Query_ID: 1&#x000A;Duration: 0.00022400&#x000A;   Query: SELECT DISTINCT(category_id) FROM 'posts'&#x000A;2 rows in set, 1 warning (0.00 sec)&#x000A;&#x000A;mysql> show profile for query 1;&#x000A;+--------------------------------+----------+&#x000A;| Status                         | Duration |&#x000A;+--------------------------------+----------+&#x000A;| starting                       | 0.000068 |&#x000A;| Waiting for query cache lock   | 0.000004 |&#x000A;| init                           | 0.000002 |&#x000A;| checking query cache for query | 0.000066 |&#x000A;| checking privileges on cached  | 0.000017 |&#x000A;| checking permissions           | 0.000017 |&#x000A;| sending cached result to clien | 0.000028 |&#x000A;| cleaning up                    | 0.000007 |&#x000A;+--------------------------------+----------+&#x000A;12 rows in set, 1 warning (0.00 sec)</textarea>
+    </p>
+        
+        <ul>
+        <li>'Copying to tmp table'</li>
+        <li>'Copying to tmp table on disk'</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>The Query cache</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Is it on?</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>SET query_cache_type=1</textarea>
+    </p>
+        
+        <p><textarea class='code' display='none' mode='shell'>mysql> SHOW VARIABLES LIKE "%query_cache%";&#x000A;+------------------------------+---------+&#x000A;| Variable_name                | Value   |&#x000A;+------------------------------+---------+&#x000A;| have_query_cache             | YES     |&#x000A;| query_cache_limit            | 1048576 |&#x000A;| query_cache_min_res_unit     | 4096    |&#x000A;| query_cache_size             | 1048576 |&#x000A;| query_cache_type             | ON      |&#x000A;| query_cache_wlock_invalidate | OFF     |&#x000A;+------------------------------+---------+&#x000A;6 rows in set (0.00 sec)</textarea>
+    </p>
+        
+        <p>MySQL with homebrew has it disabled</p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Configure size</h1>
+        
+        <ul>
+        <li>Obvious but remember to set it to the right size</li>
+        <li>Normally 20% of RAM</li>
+        <li>Can change on the fly</li>
+        </ul>
+        
+        
+        <p><textarea class='code' display='none' mode='shell'>mysql> SET GLOBAL query_cache_size = 40000;&#x000A;Query OK, 0 rows affected, 1 warning (0.00 sec)</textarea>
+    </p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Query Cache hit rate</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> show status like 'Qcache%';&#x000A;+-------------------------+--------+&#x000A;| Variable_name           | Value  |&#x000A;+-------------------------+--------+&#x000A;| Qcache_free_blocks      | 1      |&#x000A;| Qcache_free_memory      | 952504 |&#x000A;| Qcache_hits             | 139683 |&#x000A;| Qcache_inserts          | 252823 |&#x000A;| Qcache_lowmem_prunes    | 125408 |&#x000A;| Qcache_not_cached       | 486680 |&#x000A;| Qcache_queries_in_cache | 4      |&#x000A;| Qcache_total_blocks     | 10     |&#x000A;+-------------------------+--------+&#x000A;8 rows in set (0.00 sec)</textarea>
+    </p>
+        
+        <p><textarea class='code' display='none' mode='&#x000A;('>(Qcache_hits/ (Qcache_hits+Qcache_inserts+Qcache_not_cached) )&#x000A;  *100&#x000A;)</textarea>
+    </p>
+        
+        <ul>
+        <li>Should be north of 80%</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Too many cache misses?</h1>
+        
+        <ul>
+        <li>Remember queries must be exactly the same</li>
+        <li><code>Qcache_lowmem_prunes</code> is high, maybe too many unique queries or small cache</li>
+        <li><code>query_cache_limit</code> Size of query to be cached (rare)</li>
+        <li>Test with MySQL profiling to see 'query cache' in status'</li>
+        <li>Look at <code>QC_Hit: Yes</code> in your percona slow log</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>RDMS optimizations</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Innodb tuning</h1>
+        
+        <p><textarea class='code' display='none' mode='sql'>mysql> SHOW ENGINE INNODB STATUS;</textarea>
+    </p>
+        
+        <ul>
+        <li>See if any deadlocks</li>
+        <li>inserts/s, updates/s, deletes/s, reads/s</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Innodb engine settings</h1>
+        
+        <ul>
+        <li><code>innodb_buffer_pool_size</code> normally 60 - 80% of RAM</li>
+        <li><code>innodb_file_by_table</code>, to split amongst disks for higher throughput</li>
+        <li><code>innodb_flush_log_at_trx_commit</code> = 2 (control by OS rather than engine)</li>
+        <li><code>innodb_thread_concurrency</code> = 2 * (No. of CPUs + NumDisks)</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Threads</h1>
+        
+        <ul>
+        <li><code>thread_concurrency</code> = no. of Cores * 2</li>
+        <li><code>thread_cache_size</code> = 100 - ((threads_created / max_connections)) * 100)</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Overall memory usage</h1>
+        
+        <ul>
+        <li>Never go too high, Don't swap</li>
+        <li>This should be the total footprint</li>
+        </ul>
+        
+        
+        <p>innodb_buffer_pool_size +
+        key_buffer_size +
+        query_cache_size +
+        (max_connections *
+          (192k + sort_buffer_size + read_buffer_size + tmp_table_size)
+        ) +
+        32M</p>
+        
+        <ul>
+        <li>192k for thread size</li>
+        <li>32M for binaries</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Bonus stuff</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Hash indexes</h1>
+        
+        <p>Hashing algorithm for indexes</p>
+        
+        <ul>
+        <li>For example MD5(url)
+        
+        <ul>
+        <li>Reduces key length for comparing</li>
+        <li>Inserts might be slower but ok if lots of reads are needed</li>
+        <li>Only good for equality conditions</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Size of indexes vs data</h1>
+        
+        <p><textarea class='code' display='none' mode='shell'>mysql> SELECT count(*) tables,&#x000A;    ->   concat(round(sum(table_rows)/1000000,2),'M') rows,&#x000A;    ->   concat(round(sum(data_length)/(1024*1024*1024),2),'G') data,&#x000A;    ->   concat(round(sum(index_length)/(1024*1024*1024),2),'G') idx,&#x000A;    ->   concat(round(sum(data_length+index_length)/(1024*1024*1024),2),'G') total_size,&#x000A;    ->   round(sum(index_length)/sum(data_length),2) idxfrac&#x000A;    -> FROM information_schema.TABLES;&#x000A;+--------+--------+-------+-------+------------+---------+&#x000A;| tables | rows   | data  | idx   | total_size | idxfrac |&#x000A;+--------+--------+-------+-------+------------+---------+&#x000A;|    606 | 12.04M | 3.18G | 1.85G | 5.02G      |    0.58 |&#x000A;+--------+--------+-------+-------+------------+---------+&#x000A;1 row in set (0.71 sec)</textarea>
+    </p>
+        
+        <p><textarea class='code' display='none' mode='shell'>... WHERE TABLE_NAME="users";&#x000A;+--------+-------+-------+-------+------------+---------+&#x000A;| tables | rows  | data  | idx   | total_size | idxfrac |&#x000A;+--------+-------+-------+-------+------------+---------+&#x000A;|      3 | 1.45M | 0.50G | 0.74G | 1.24G      |    1.50 |&#x000A;+--------+-------+-------+-------+------------+---------+&#x000A;1 row in set (0.00 sec)</textarea>
+    </p>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>That's it.</h1>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Remember</h1>
+        
+        <ul>
+        <li>Don't spend all your time optimizing the DB</li>
+        <li>Frontend perf, webpagetest.org</li>
+        <li>Static content w/Ajax offloading</li>
+        <li>Moar Cache (Memcached), remember hit rate.</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <p>Other resources:</p>
+        
+        <ul>
+        <li>Percona</li>
+        <li>High Performance MySQL blog</li>
+        <li>http://www.slideshare.net/mysqlops/percona-live-2012ppt-mysql-query-optimization</li>
+        <li>http://www.percona.com/blog/2014/01/28/10-mysql-settings-to-tune-after-installation/</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Thank you! Questions?</h1>
+        
+        <h2>kalv@brewhouse.io</h2>
+        
+        <h3>@kalv</h3>
+        
+        <h3>#VWP Sep 2014</h3>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <!-- deck.js navigation extension -->
+    <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
+    <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
+    <!-- deck.js hash extension -->
+    <a class='deck-permalink' href='.' title='Permalink to this slide'>#</a>
+    <!-- deck.js status extension -->
+    <p class='deck-status'>
+      <span class='deck-status-current'></span>
+      /
+      <span class='deck-status-total'></span>
+    </p>
+    <!-- jQuery & deck.js -->
+    <script src="deck.js/support/jquery.1.6.4.min.js" type="text/javascript"></script>
+    <script src="deck.js/core/deck.core.js" type="text/javascript"></script>
+    <!-- deck.js extension JS files -->
+    <script src="deck.js/extensions/codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/deck.codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clojure/clojure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/coffeescript/coffeescript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/diff/diff.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/haskell/haskell.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/lua/lua.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/php/php.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/plsql/plsql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/python/python.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/r/r.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/rst/rst.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/smalltalk/smalltalk.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/sparql/sparql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/stex/stex.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/velocity/velocity.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xmlpure/xmlpure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/yaml/yaml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/status/deck.status.js" type="text/javascript"></script>
+    <!-- your custom JS here, including call to initialize deck.js-codemirror -->
+    <script src="js/dealing-with-clients.js" type="text/javascript"></script>
+    <!-- Initialize the deck. -->
+    <script type='text/javascript'>
+      $(function() { $.deck('.slide'); });
+    </script>
+  </body>
+</html>
